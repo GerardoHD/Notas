@@ -1,0 +1,74 @@
+Configurar Git
+
+Iniciar sesión en Google Chrome, configurar Integración con GNOME Shell, crear accesos directos de Google Keep y fijarla al dock
+
+En Extensiones activar:
+Applications Menu
+Mpris Indicator Button
+Pamac Updates Indicator
+Places Status Indicator
+Removable Drive Menu
+
+Configurar Git
+
+Copiar desde Google Drive:
+/GerardoHD/Wallpapers-S/Landscape/* ~/.local/share/backgrounds/
+/GerardoHD/Badges/$current-profile-picture ~/Imágenes/
+
+Configurar aplicaciones predeterminadas, fondo de pantalla, e imagen de perfil, cambiar nombre de usuario en Configuración
+
+Activar soporte AUR en pamac-aur
+
+Firmar bootx64.efi de Brunch:
+sudo sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /efi/efi/boot/bootx64.efi /efi/efi/boot/bootx64.efi
+
+Instalar Lenovo Diagnostics a /efi:
+mkdir /efi/efi/Lenovo/
+cp BOOTX64.efi /efi/efi/Lenovo/Diagnostics.efi
+efibootmgr --create --disk /dev/sda --part 1 --label "Lenovo Diagnostics" --loader "\efi\efi\Lenovo\Diagnostics.efi" --verbose
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /efi/efi/Lenovo/Diagnostics.efi /efi/efi/Lenovo/Diagnostics.efi
+
+Seleccionar carpetas de Disco Duro Externo y copiar a /run/media/gerardohd/Datos/
+
+Configurar Discos de GNOME para que monte la partición de Datos en /run/media/gerardohd/Datos/
+
+Enlazar Carpetas de Medios:
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Descargas	/home/gerardohd/Descargas/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Documentos	/home/gerardohd/Documentos/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Imagenes 	/home/gerardohd/Imágenes/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Musica 	/home/gerardohd/Música/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Videos 	/home/gerardohd/Vídeos/
+
+Usar menulibre y desactivar entradas de:
+Vim
+Administrar impresión
+Controles parentales
+Hardware Locality lstopo
+Navegador Zeroconf de Avahi
+Examinador de servidores SSH de Avahi
+Examinador de servidores VNC de Avahi
+E-book editor
+E-book viewer
+LRF viewer
+CMake
+Qt V4L2 test Utility
+Qt V4L2 video capture utility
+Configuración de red avanzada
+Configuración de impresión
+
+Configurar tema KvGnome en Kvantum Manager
+Configurar qt5ct:
+Estilo: kvantum
+Tipos de letra, General: Fira Sans 11. Ancho Fijo: Fira Mono 11
+Tema de iconos: Adwaita
+Distribución de los botones de diálogo: GNOME
+Distribución del teclado: GNOME
+
+-------------------------------------------
+
+Firmar archivos del arch_iso para Secure Boot
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI
+
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/arch/boot/x86_64/vmlinuz-linux /run/media/gerardohd/$YYYYMM/arch/boot/x86_64/vmlinuz-linux
+
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/$YYYYMM/EFI/BOOT/bootx64.efi /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/bootx64.efi

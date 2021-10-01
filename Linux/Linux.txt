@@ -1,0 +1,65 @@
+Instalar Temas VLC:
+/.local/share/vlc/skins2/
+
+telnet towel.blinkenlights.nl
+curl ipinfo.io
+
+Aumentar espacio temporalmente en /tmp:
+mount -o remount,size=XG,noatime /tmp
+
+Grabar cámara web desde terminal linux:
+https://www.taringa.net/posts/linux/18350710/Grabar-camara-web-desde-terminal-linux-ubuntu-debian.html
+$ ls /dev/video* 
+$ cat /proc/asound/cards
+SI SE FIJAN EN HW:0 el cero lo cambian por el número que les salió de hecho también puede ser cero SOLO CAMBIAN EL NÚMERO , EL RESTO LO DEJAN COMO ESTÁ  
+$ ffmpeg -f video4linux2 -i /dev/video0 -f alsa -i hw:0 -acodec mp2 -qscale 0 $HOME/video.avi 
+
+OpenSSH
+Extraído de: https://wiki.archlinux.org/index.php/Secure_Shell_(Espa%C3%B1ol)
+El archivo de configuración del demonio SSH se puede encontrar y editar en /etc/ssh/sshd_config
+Para permitir el acceso sólo a algunos usuarios añadir esta línea:
+AllowUsers    user1 user2
+Para conectarse a un servidor, ejecuta:
+$ ssh -p port user@server-address
+
+Para conectarnos a una red inalambrica con Network Manager:
+$ nmcli d wifi connect "SSID" password "contraseña"
+
+-------------------------------------------
+Eliminar Mok si el instalador de Ubuntu falla:
+sudo chattr -i /sys/firmware/efi/efivars/Mok{Auth,New}
+sudo rm /sys/firmware/efi/efivars/Mok{Auth,New}
+
+Crear codigo qr para conectarse a red wifi:
+After installing the qrencode package, run the following:
+qrencode -o wifi.png "WIFI:T:WPA;S:<SSID>;P:<PASSWORD>;;"
+
+Filebot:
+Peliculas: /run/media/gerardohd/GHD-3640GB/Filebot/Movies/{ny}/{ny}{' CD'+pi}{subt}
+Episodios: /run/media/gerardohd/GHD-3640GB/Filebot/TV/{ny}/{'Season '+s}/{n} - {s00e00} - {t}
+Musica: /run/media/gerardohd/GHD-3640GB/Filebot/Music/{n}/{album} {[y]}/{pi.pad(2)+' - '} {t}
+
+Vaciar papelera de reciclaje:
+rm -rf ~/.local/share/Trash/*
+
+Borrar historial de la terminal:
+history -c; >$HISTFILE
+
+free --mega --human -t -s10 -c 4 -w
+
+Instalar fatresize en Ubuntu:
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo apt update
+sudo apt install fatresize
+
+Verificar carga de microcode intel:
+dmesg | grep microcode
+
+To check if a binary is signed and list its signatures use:
+sbverify --list /path/to/binary
+
+Es probable que la solución más fácil sea arrancar Arch desde un live USB, montar tu sistema en el directorio /mnt y actualizarlo con:
+pacstrap -C /mnt/etc/pacman.conf -i -M /mnt base
+arch-chroot /mnt
+pacman -Syu

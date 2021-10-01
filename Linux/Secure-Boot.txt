@@ -1,0 +1,35 @@
+Crear Machine Owner Key
+Requerimientos: sudo pacman -S sbsigntools y yay -S shim-signed
+
+mkdir efitools
+cd efitools
+openssl req -newkey rsa:4096 -nodes -keyout MOK.key -new -x509 -sha256 -days 3650 -subj "/CN=GerardoHD Machine Owner Key/" -out MOK.crt
+openssl x509 -outform DER -in MOK.crt -out MOK.cer
+cd ..
+
+sudo cp -r efitools /root/
+sudo -i
+cd efitools
+cp MOK.cer /boot/
+
+cp /boot/EFI/systemd/systemd-bootx64.efi /boot/EFI/BOOT/grubx64.efi
+cp /usr/share/shim-signed/shimx64.efi /boot/EFI/BOOT/BOOTX64.efi
+cp /usr/share/shim-signed/mmx64.efi /boot/EFI/BOOT/
+
+sbsign --key ~/efitools/MOK.key --cert ~/efitools/MOK.crt --output /boot/EFI/BOOT/grubx64.efi /boot/EFI/BOOT/grubx64.efi
+sbsign --key ~/efitools/MOK.key --cert ~/efitools/MOK.crt --output /boot/EFI/grub/grubx64.efi /boot/EFI/grub/grubx64.efi
+sbsign --key ~/efitools/MOK.key --cert ~/efitools/MOK.crt --output /boot/EFI/systemd/systemd-bootx64.efi /boot/EFI/systemd/systemd-bootx64.efi
+
+Reiniciar y cuando shimx64.efi pida clave navegar en el sistema de archivos hasta encontrar MOK.cer ubicado en /boot/
+---------------------------------------------------------
+Verificar la firma:
+sbverify --cert ~/efitools/MOK.crt /boot/EFI/BOOT/grubx64.efi
+sbverify --cert ~/efitools/MOK.crt /boot/EFI/grub/grubx64.efi
+sbverify --cert ~/efitools/MOK.crt /boot/EFI/systemd/systemd-bootx64.efi
+sbverify --cert ~/efitools/MOK.crt /boot/vmlinuz-linux
+-------------------------------------------------------
+Descargar hook para Secure-boot
+sudo wget -c https://raw.githubusercontent.com/GerardoHD/Linux/master/Scripts/Arch/Hooks/101-sign_files_for_secure_boot.hook -O /usr/share/libalpm/hooks/101-sign_files_for_secure_boot.hook
+
+Acercamiento alternativo:
+https://ruderich.org/simon/notes/secure-boot-with-grub-and-signed-linux-and-initrd

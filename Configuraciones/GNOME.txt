@@ -1,0 +1,14 @@
+Nautilus:
+Colocar carpetas antes que los archivos
+Descripciones de la vista de iconos: Mostrar modificado: fecha
+Columnas de la lista: Mostrar modificado: fecha
+Predeterminar gedit como aplicación para editar texto
+
+Gedit:
+Resaltar parejas de corchetes
+Activar complementos:
+Apertura rápida
+Dibujar espacios
+Git
+Multiedición
+Terminal empotrado

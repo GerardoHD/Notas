@@ -1,0 +1,114 @@
+grub-install --recheck /dev/sda
+
+Seleccionar Tema:
+Open the file "/etc/default/grub" and inside it update the variable GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
+
+menuentry "Chromium OS" {
+    savedefault
+    insmod ext2
+    set root='(hd0,8)'
+    linux /boot/vmlinuz quiet console=tty2 init=/sbin/init boot=local rootwait ro noresume noswap loglevel=1 noinitrd root=/dev/sda8 i915.modeset=1 cros_legacy cros_debug
+}
+
+menuentry "Android-x86 4.4 KitKat R5" {
+set root='(hd0,5)'
+linux /android-4.4-r5/kernel quiet root=/dev/ram0 androidboot.hardware=generic_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-4.4-r5
+initrd /android-4.4-r5/initrd.img}
+
+
+menuentry "Android-x86 5.1 Lollipop" {
+set root='(hd0,5)'
+linux /android-5.1-rc1/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-5.1-rc1
+initrd /android-5.1-rc1/initrd.img}
+
+
+menuentry "Android-x86 6.0 Marshmallow" {
+set root='(hd0,5)'
+linux /android-6.0-rc1/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-6.0-rc1
+initrd /android-6.0-rc1/initrd.img}
+
+menuentry "Android TV-x86 6.0.1" {
+set root='(hd0,5)'
+linux /android-2016-06-20/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/android-2016-06-20
+initrd /android-2016-06-20/initrd.img}
+
+
+menuentry "CyanogenMOD 13 x86 Marshmallow" {
+set root='(hd0,5)'
+linux /cm-x86-13.0-r1/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 acpi_sleep=s3_bios,s3_mode SRC=/cm-x86-13.0-r1
+initrd /cm-x86-13.0-r1/initrd.img}
+
+
+menuentry "Android-X86 7.1.2 RC1" {
+set root='(hd0,5)'
+linux /android-7.1-rc1/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 androidboot.selinux=permissive acpi_sleep=s3_bios,s3_mode SRC=/android-7.1-rc1
+initrd /android-7.1-rc1/initrd.img}
+
+
+menuentry "Bliss-x86 7.2 Nougat" {
+set root='(hd0,5)'
+linux /android-2017-07-03/kernel quiet root=/dev/ram0 androidboot.selinux=permissive SRC=/android-2017-07-03 
+initrd /android-2017-07-03/initrd.img}
+
+menuentry "Bliss-x86 7.2 Nougat VGA" {
+set root='(hd0,5)'
+linux /android-2017-07-03/kernel quiet root=/dev/ram0 androidboot.selinux=permissive SRC=/android-2017-07-03 video=LVDS-1:d
+initrd /android-2017-07-03/initrd.img}
+
+menuentry "Phoenix OS" {
+set root='(hd0,3)'
+linux /PhoenixOS/kernel quiet root=/dev/ram0 androidboot.selinux=permissive SRC=/PhoenixOS 
+initrd /PhoenixOS/initrd.img}
+
+menuentry "Phoenix OS VGA" {
+set root='(hd0,3)'
+linux /PhoenixOS/kernel quiet root=/dev/ram0 androidboot.selinux=permissive SRC=/PhoenixOS video=LVDS-1:d
+initrd /PhoenixOS/initrd.img}
+
+menuentry "Bliss OS 11.10" {
+set root='(hd0,6)'
+linux /bliss-x86-11.10/kernel quiet root=/dev/ram0 androidboot.selinux=permissive androidboot.hardware=android_x86_64 SRC=/bliss-x86-11.10
+initrd /bliss-x86-11.10/initrd.img}
+
+menuentry "Solus" {
+        insmod part_gpt
+        insmod fat
+        set root="hd0,gpt1"
+        chainloader /EFI/goofiboot/goofibootx64.efi}
+
+menuentry 'Solus UUID' --class Solus --class gnulinux $menuentry_id_option 'osprober-efi-AE39-DC87' {
+    	savedefault
+    	insmod part_gpt
+    	insmod fat
+    	set root='hd0,gpt1'
+    	if [ x$feature_platform_search_hint = xy ]; then
+    	  search --no-floppy --fs-uuid --set=root --hint-bios=hd0,gpt1 --hint-efi=hd0,gpt1 --hint-baremetal=ahci0,gpt1  AE39-DC87
+    	else
+    	  search --no-floppy --fs-uuid --set=root AE39-DC87
+    	fi
+    	chainloader /EFI/goofiboot/goofibootx64.efi
+    }
+
+menuentry "ChromeOS" --class "brunch" {
+        #rmmod tpm
+        img_part=/dev/sda5
+        img_path=/chromeos.img
+        search --no-floppy --set=root --file $img_path
+        loopback loop $img_path
+        linux (loop,7)/kernel boot=local noresume noswap loglevel=7 options=pwa \
+                cros_secure cros_debug loop.max_part=16 img_part=$img_part img_path=$img_path \
+                console= vt.global_cursor_default=0 brunch_bootsplash=default quiet
+        initrd (loop,7)/lib/firmware/amd-ucode.img (loop,7)/lib/firmware/intel-ucode.img (loop,7)/initramfs.img
+}
+
+sudo fdisk -l
+sudo mount /dev/sda5 /mnt
+sudo grub-install /dev/sda --root-directory=/mnt
+
+Grub Rescue:
+set boot=(hd0,msdos6)
+set prefix=(hd0,msdos6)/boot/grub
+insmod normal
+normal
+
+https://askubuntu.com/questions/474672/how-do-i-remove-advanced-options-for-ubuntu-in-grub-menu

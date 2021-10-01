@@ -1,0 +1,62 @@
+Extensiones:
+
+Absolute Enable Right Click & Copy:
+https://chrome.google.com/webstore/detail/absolute-enable-right-cli/jdocbkpgdakpekjlhemmfcncgdjeiika/related
+https://microsoftedge.microsoft.com/addons/detail/absolute-enable-right-cli/enkbbdhdmbpfohfkfmdmjkpmolkbelgl
+Bitwarden:
+https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
+https://microsoftedge.microsoft.com/addons/detail/bitwarden-free-password/jbkfoedolllekgbhcbcoahefnbanhhlh
+Documentos de Google sin conexión:
+https://chrome.google.com/webstore/detail/google-docs-offline/ghbmnnjooekpmoecnnnilnnbdlolhkhi
+Edición de Office:
+https://chrome.google.com/webstore/detail/office-editing-for-docs-s/gbkeegbaiigmenfmjfclcdgdpimamgkj
+Google Traductor:
+https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb
+Save to Pocket:
+https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=es
+https://microsoftedge.microsoft.com/addons/detail/save-to-pocket/jicacccodjjgmghnmekophahpmddeemd
+Redirect AMP to HTML:
+https://chrome.google.com/webstore/detail/redirect-amp-to-html/kifkmmpiicbcnkjaliilaoeaojlldonl
+https://microsoftedge.microsoft.com/addons/detail/redirect-amp-to-html/abjhjmfkmdfggjomfpojjfcehhkambcc
+uBlock Origin:
+https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
+https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak
+
+Web Apps:
+
+Google:
+https://mail.google.com/mail/u/0/#inbox
+https://drive.google.com/drive/my-drive?lfhs=2 https://docs.google.com/spreadsheets/u/0/ tab-strip
+https://docs.google.com/document/u/0/ tab-strip
+https://photos.google.com/
+https://www.google.com/maps
+https://keep.google.com/
+Juegos:
+https://gamesnacks.com/embed/
+Lectura:
+https://www.inoreader.com/
+https://getpocket.com/es-LA/my-list
+https://artsandculture.google.com/
+https://www.wired.com/ tab-strip
+Medios:
+https://www.netflix.com/browse
+https://open.spotify.com/
+https://play.hbomax.com/
+https://pluto.tv/live-tv/
+https://mytuner-radio.com/es/
+https://www.youtube.com/
+Redes:
+https://www.instagram.com/  tab-strip
+https://twitter.com/home tab-strip
+https://www.reddit.com/ tab-strip
+https://web.whatsapp.com/
+https://www.facebook.com/ tab-strip
+https://www.messenger.com/
+https://www.tiktok.com/ tab-strip
+https://www.tumblr.com/dashboard tab-strip
+Varios:
+https://vault.bitwarden.com/#/
+https://github.com/ tab-strip
+https://pwa.zoom.us/wc
+https://www.amazon.com.mx/ tab-strip
+https://app.webadb.com/#/

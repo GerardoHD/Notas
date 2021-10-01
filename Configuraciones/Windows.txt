@@ -1,0 +1,193 @@
+Abrir Windows Update y actualizar
+
+En cambiar sonidos del sistema, activar Reproducir sonido inicio de Windows
+
+Antes de reiniciar para aplicar actualizaciones, cambiar nombre del dispositivo en Configuración> Sistema> Acerca de
+
+Iniciar sesión en cuenta Google, crear accesos directos de Google Keep y fijarla a la barra de tareas
+
+Instalar actualizaciones desde Microsoft Store
+
+Instalar Apps de Microsoft Store usando Windows + R e introduciendo el enlace:
+ACG Player
+ms-windows-store://pdp/?productid=9NBLGGH698C7
+AV1 Video Extension
+ms-windows-store://pdp/?productid=9MVZQVXJBQ9V
+Extensión de imagen RAW
+ms-windows-store://pdp/?productid=9NCTDW2W1BH8
+Extensiones de video HEVC
+ms-windows-store://pdp/?productid=9NMZLZ57R3T7
+Extensión de vídeo MPEG-2
+ms-windows-store://pdp/?productid=9N95Q1ZZPMH4
+Fallout Shelter
+ms-windows-store://pdp/?productid=9NBLGGH556N4
+Instalador de aplicación
+ms-windows-store://pdp/?productid=9NBLGGH4NNS1
+MusicBee
+ms-windows-store://pdp/?productid=9P4CLT2RJ1RS
+myTube!
+ms-windows-store://pdp/?productid=9WZDNCRCWF3L
+Ouga - Tumblr App
+ms-windows-store://pdp/?productid=9NBLGGH6GVHJ
+Ridiculous Marathon
+ms-windows-store://pdp/?productid=9NBLGGH626FL
+Tentacles: Enter the mind
+ms-windows-store://pdp/?productid=9WZDNCRFJB4N
+Torrex Pro
+ms-windows-store://pdp/?productid=9WZDNCRDSGKG
+Where's My Water? 2
+ms-windows-store://pdp/?productid=9WZDNCRFJCV6
+
+Cambiar ubicación de guardado de carpetas de usuario en Windows Explorer y configurarlo
+General:
+Abrir explorador de archivos para: Este equipo
+Ver:
+Usar las casillas para seleccionar elementos
+
+Usando administración de Discos, quitar letra asignada al Hub USB, y asignar E: DVD RW
+
+Powershell:
+reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+
+winget install Microsoft.VC++2005Redist-x86
+winget install Microsoft.VC++2005Redist-x64
+winget install Microsoft.VC++2008Redist-x86
+winget install Microsoft.VC++2008Redist-x64
+winget install Microsoft.VC++2008Redist-x86
+winget install Microsoft.VC++2010Redist-x86
+winget install Microsoft.VC++2010Redist-x64
+winget install Microsoft.VC++2012Redist-x86
+winget install Microsoft.VC++2012Redist-x64
+winget install Microsoft.VC++2013Redist-x86
+winget install Microsoft.VC++2013Redist-x64
+winget install Microsoft.VC++2015-2019Redist-x86
+winget install Microsoft.VC++2015-2019Redist-x64
+
+winget install 7zip.7zip
+-winget install AdrianAllard.FileConverter
+-winget install Amazon.Kindle
+winget install Armin2208.WindowsAutoNightMode
+winget install calibre.calibre
+winget install clsid2.mpc-hc
+-winget install EpicGames.EpicGamesLauncher
+winget install Google.Chrome
+winget install Google.Drive
+winget install Intel.IntelDriverAndSupportAssistant
+winget install Lenovo.SystemUpdate
+-winget install Microsoft.Powertoys
+winget install Microsoft.WindowsTerminal
+winget install JackieLiu.NotepadsApp
+winget install Rufus.Rufus
+-winget install Valve.Steam
+-winget install Zoom.Zoom
+
+Desinstalar Apps del menú inicio
+Cortana: 
+Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
+Microsoft Solitaire Collection:
+Get-AppxPackage *solitairecollection* | Remove-AppxPackage
+OneNote: 
+Get-AppxPackage *onenote* | Remove-AppxPackage
+Office: 
+Get-AppxPackage *officehub* | Remove-AppxPackage
+Portal de realidad mixta:
+Get-AppxPackage *Microsoft.MixedReality.Portal* | Remove-AppxPackage
+Skype: 
+Get-AppxPackage *skypeapp* | Remove-AppxPackage
+Tu Telefono: 
+Get-AppxPackage *Microsoft.YourPhone* | Remove-AppxPackage
+Xbox Console Companion: 
+Get-AppxPackage *Microsoft.XboxApp* | Remove-AppxPackage
+Visor 3D:
+Get-AppxPackage *Microsoft.Microsoft3DViewer* | Remove-AppxPackage
+
+Instalar programas de /Windows/Programas/Core
+Desactivar protección en tiempo real de Seguridad de Windows
+  Instalar KMSpico
+  Agregar exclusiones:
+  C:\Windows\SECOH\QAD.dll
+  C:\Windows\SECOH\QAD.exe
+  C:Program Files\KMSpico\AutoPico
+  C:Program Files\KMSpico\KMSELDI.exe
+  C:Program Files\KMSpico\Service_KMS.exe
+  C:Program Files\KMSpico
+
+Instalar programas de /Windows/Programas
+Serial Allavsoft:
+1EFD-4727-7CE3-C67C-DEC4-B3E8-7B22-82A5
+
+Ejecutar Lenovo System Update y actualizar todo
+
+Instalar actualizaciones de Intel Support & Driver Assistant
+
+Copiar carpeta de accesos directos
+
+Configurar Ultimate Windows Tweaker:
+  Customization
+  -
+  File explorer:
+  Make taskbar button switch to last active window
+  Check by default "Do this for all current items"
+  Tweak drive letters: Before label
+  -
+  This Pc:
+  Customize inbuilt folders:
+  Activar todas excepto objetos 3D
+  --
+  User Accounts:
+  Enable verbose logon messages
+  --
+  Context menu:
+  Desktop context menu 2
+  Add "Copy to"
+  Add "Move to"
+  -
+  Other context menus:
+  Remove defaults:
+  3D print with Builder
+  Edit with Paint 3D
+  Cast to device
+  --
+  Additional:
+  Edit OEM & registered information:
+  Manufacturer: Lenovo
+  Model: C20-00
+  Support URL: https://pcsupport.lenovo.com/mx/es/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/c20-00/f0bb/f0bb00ggld/mp13u8sn
+  
+Montar D:\ISO\Controladores\Driver Epson L4150.iso y ejecutar EPWizard.exe
+Montar D:\ISO\Windows-Juegos\Papers Please 1.2.72.iso y ejecutar setup.exe
+Montar D:\ISO\Windows-Juegos\Untitled Goose Game.iso y ejecutar setup.exe
+Montar D:\ISO\Windows-Juegos\Microsoft Office Professional Plus 2019 Retail.iso y ejecutar setup.exe
+Tras reiniciar el sistema, volver a ejecutar Windows Update, y poner a Word a actualizarse
+
+Ejecutar EPSON Software Updater e instalar EPSON ScanSmart
+
+Ir a: C:\ProgramData\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas
+Eliminar accesos directos de Outlook y Skype Empresarial
+Ir a: C:\Users\Gerar\AppData\Roaming\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas
+
+MusicBee:
+<Artista del Álbum>\<Álbum [Año]>\<Disco-Tema> <Título>
+Configurar Monoaural como tema
+En la vista de pistas, activar Caratula mediana
+En el reproductor inferior activar el botón favorito de Last.fm
+
+Copiar D:\Windows\Varios\toolbar.png C:\ProgramFiles\MPC-HC\
+
+--------------------------------------------------------------
+Seriales:
+Halo CE:
+G9QK2-22KV6-TFXCR-V3Y9M-2CCBJ
+UltraISO: 
+3683-C3CB-56C8-7DF4
+AOMEI Partition Assistant: AOPR-9F9F9-D7R09-F98F9
+Doom 3:
+Q7G4-ALZ9-N5NV-Z98S-C4
+
+Filebot:
+Peliculas: 
+E:/Filebot/Movies/{ny}/{ny}{' CD'+pi}{subt}
+Episodios: 
+E:/Filebot/TV/{ny}/{'Season '+s}/{n} - {s00e00} - {t}
+Musica: 
+E:/Filebot/Music/{n}/{album} {[y]}/{pi.pad(2)+' - '} {t}

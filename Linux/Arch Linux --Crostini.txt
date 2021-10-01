@@ -1,0 +1,89 @@
+#!/bin/bash
+
+#vsh termina
+
+#lxc stop penguin
+
+#exit
+
+#vmc stop termina
+
+#vmc destroy termina
+
+vmc start termina
+
+lxc stop penguin
+
+lxc delete penguin
+
+lxc launch images:archlinux penguin
+
+lxc exec penguin -- bash
+
+ip -4 a show dev eth0
+
+# ^ See if there's a network connection.
+#   non-empty output = good (skip)
+#   empty output     = proceed below
+
+dhcpcd eth0
+ping -c 3 archlinux.org
+
+pacman -Syyu --noconfirm base-devel dialog wget git sudo vim dhclient
+
+systemctl enable --now dhclient@eth0
+
+curl -L https://git.io/JzpKF | bash
+
+#Arch-Crostini-Setup / Etapa 1
+
+exit
+
+==========================
+
+lxc console penguin
+
+#Arch-Crostini-Setup / Etapa 2
+
+==========================
+
+lxc start penguin
+
+lxc console penguin
+
+#Arch-Crostini-Setup / Etapa 3
+
+exit
+
+vmc stop termina
+
+==========================
+
+vmc start termina
+
+lxc start penguin
+
+lxc console penguin
+
+#Arch-Crostini-Setup / Etapa 4
+
+exit
+
+vmc stop termina
+
+#Reiniciar el dispositivo
+
+==========================
+
+#Arch-Crostini-Setup / Etapa 5
+
+##########################
+
+	  rm -rf ~/.config/pulse
+	  cp -rT /etc/skel/.config/pulse ~/.config/pulse
+
+https://dl.flathub.org/repo/flathub.flatpakrepo
+
+https://gist.github.com/radupotop/4013294/ccacedd69d54de7f2fd5881b546d5192d6a2bddb	
+
+https://gist.github.com/rstacruz/aeb2273d19e5f5ffbe27a973cb82717f

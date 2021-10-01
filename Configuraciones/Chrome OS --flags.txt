@@ -1,0 +1,7 @@
+webui-tab-strip
+
+enable-desktop-pwas-tab-strip
+enable-desktop-pwas-tab-strip-settings
+files-archivemount
+crosh-swa
+enable-holding-space-in-progress-downloads-integration

@@ -1,0 +1,99 @@
+https://github.com/sebanc/brunch
+
+Particiones:
+/dev/sda1 EFI/ESP 	256M
+/dev/sda2 Windows 	80G
+/dev/sda3 Swap			4G
+/dev/sda4 Arch Linux 38G
+/dev/sda5 Datos		262G
+/dev/sda6 Brunch		54G
+-------------------------------------------------
+Instalar Brunch a HDD o USB:
+
+Requerimientos:
+
+acceso root
+
+pv, tar, cgpt
+
+Crear Brunch-$version/
+
+Descargar recovery y brunch dentro de Brunch-$version:
+https://cros.tech/device/rammus
+https://github.com/sebanc/brunch/releases/latest
+
+Extraer chromeos_rammus-$version.bin.zip y extraer brunch:
+
+tar zxvf brunch_$version.tar.gz
+
+lsblk -e7
+
+sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sdb
+
+(En la advertencia de Secure Boot) "OK->Enroll key from disk->EFI-SYSTEM->brunch.der->Continue"
+
+Reiniciar equipo
+
+-------------------------------------------------
+Instalar ChromeOS en Dual Boot:
+
+Crear partición que sea al menos 12GB más grande que el espacio libre deseado.
+
+lsblk -e7
+
+mkdir -p /mnt/brunch
+sudo mount /dev/sda5 /mnt/brunch
+sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /mnt/brunch/chromeos.img -s 39
+umount -R /mnt/brunch
+mkdir -p /mnt/efi
+mount /dev/sdb12 /mnt/brunch
+mount /dev/sda1 /mnt/efi
+cp /mnt/brunch/* /mnt/efi
+efibootmgr --create --disk /dev/sda --part 1 --label "ChromeOS" --loader "\efi\boot\bootx64.efi" --verbose
+vim /mnt/efi/efi/boot/grub.cfg
+
+Eliminar contenido anterior del archivo, y pegar lo siguiente:
+
+set timeout=0
+
+source /efi/boot/theme.cfg
+
+menuentry "ChromeOS" --class "brunch" {
+        #rmmod tpm
+        img_part=/dev/sda5
+        img_path=/chromeos.img
+        search --no-floppy --set=root --file $img_path
+        loopback loop $img_path
+        linux (loop,7)/kernel boot=local noresume noswap loglevel=7 options=pwa \
+                cros_secure cros_debug loop.max_part=16 img_part=$img_part img_path=$img_path \
+                console= vt.global_cursor_default=0 brunch_bootsplash=default quiet
+        initrd (loop,7)/lib/firmware/amd-ucode.img (loop,7)/lib/firmware/intel-ucode.img (loop,7)/initramfs.img
+}
+
+umount -R /mnt/brunch
+umount -R /mnt/efi
+rmdir /mnt/brunch
+rmdir /mnt/efi
+
+-------------------------------------------------
+Actualizar ChromeOS y Brunch:
+
+Crear Brunch-$version/
+
+Descargar recovery y brunch dentro de Brunch-$version:
+https://cros.tech/device/rammus
+https://github.com/sebanc/brunch/releases/latest
+
+Extraer chromeos_rammus-$version.bin.zip
+
+Abrir Crosh (CTRL+ALT+T y ejecutar shell)
+
+sudo su
+
+cd /home/user/ (TAB) /MyFiles/Downloads/Brunch-$version/
+
+sudo chromeos-update -r chromeos_rammus.bin -f brunch_$version.tar.gz
+
+Reiniciar equipo
+
+Nota: BiteDasher ha creado un script que actualiza Brunch y ChromeOS: https://github.com/BiteDasher/brcr-update

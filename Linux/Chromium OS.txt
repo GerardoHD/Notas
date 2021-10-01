@@ -1,0 +1,109 @@
+After you download the .img file, you can create a bootable USB on Linux using this command (given your USB drive is on /dev/sdb) -
+bash dd if=/path/to/downloaded/img of=/dev/sdb
+sudo dd if=/home/gerardohd/ChromiumOS.bin of=/dev/sdb bs=4M
+
+First take a look at the bootable USB you made out of the Chromium OS disk. It will have two important partitions called - ROOT_A and STATE. We need to create corresponding partitions on your hard disk (these can be larger size than the ones on the USB, a larger STATE partition gives you more local storage space. A larger ROOT-A partition is mostly of no use, as this partition’s content won’t change in the future).
+
+Let’s consider we made the following partitions -
+/dev/sda7 - ext2 - 2.15GB
+/dev/sda8 - ext4 - 6GB
+Now you should copy the corresponding partitions from your USB drive to your own hard disk using dd
+#For copying ROOT-A
+dd if=/dev/sdb3 of=/dev/sda7
+#For copying STATE
+dd if=/dev/sdb1 of=/dev/sda8
+
+| Next step would be to add a corresponding boot entry for Chromium OS to your GRUB. For that, edit /etc/grub.d/40_custom and add the following:
+menuentry "Chromium OS" {
+    savedefault
+    insmod ext2
+    set root='(hd0,7)'
+    linux /boot/vmlinuz quiet console=tty2 init=/sbin/init boot=local rootwait ro noresume noswap loglevel=1 noinitrd root=/dev/sda7 i915.modeset=1 cros_efi cros_debug
+#}
+After this run sudo grub-mkconfig -o /boot/grub/grub.cfg to generate the grub.cfg |
+
+Now there is tiny problem with Chromium OS - It expects the STATE partition to be on /dev/sda1 This is hardcoded into the OS.
+Mount your ROOT-A partition, and edit the file /sbin/chromeos_startup on it. Change the following line:
+STATE_DEV=${ROOTDEV_TYPE}8
+
+Also in the same file find and comment out this line:
+mount -n -t ${FS_FORMAT_OEM} -o ${OEM_FLAGS} ${OEM_DEV} /usr/share/oem
+
+You don't know how to become root user?
+CTRL+ALT+F2
+$ chronos   (user)
+$ password (password)
+$ sudo su
+That's it, enjoy!
+No sound?
+Login as root
+$ mount -o remount, rw /
+$ alsaconf
+Choose your sound card, then reboot!
+
+So… got Chromium OS installed on your old machine and want flash compatibility?  Read on.
+The version of Chromium OS used is ArnoldTheBat’s Version.  This may differ with different versions.
+#Prepare the filesystem for writing
+mount -o remount, rw /
+I had to run these commands before the script:
+mkdir /usr/lib/cromo
+mkdir /opt/google/chrome/pepper
+
+curl -L http://goo.gl/qPrfd | bash
+
+Codecs x86:
+curl -L http://goo.gl/reX3Z | bash 
+curl -L http://goo.gl/JL1An5 | bash
+
+Codecs x86_64:
+curl -L http://goo.gl/FrT7Q6 | bash
+curl -L http://goo.gl/JL1An5 | bash
+curl -L http://goo.gl/MuVta5 | bash
+
+ChromiumOS Script:
+curl -L http://goo.gl/NaLcbb | bash
+ChromiumOS-2 Script:
+curl -L http://goo.gl/Upi62y | bash
+
+http://www.chromium.org/developers/how-tos/api-keys
+https://blog.jbfavre.org/2014/10/26/How-to-enable-Google-Sync-with-Chromium-35-and-later-on-Debian/
+
+Crear el archivo en /etc/chrome_dev.conf:
+# Copyright 2016 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+#
+# This file may be modified to make local changes to the environment and command
+# line that session_manager uses to run Chrome. It contains one directive per
+# line, with the following forms available:
+#
+# --some-argument=/tmp/some file
+#   Adds "--some-argument=/tmp/some file" to Chrome's command line. The entire
+#   line will be passed as a single argument; do not include quotation marks
+#   unless you want them to be passed verbatim to Chrome. --vmodule and
+#   --enable-features are special-cased: session_manager combines all values
+#   that it sees from multiple directives into a single argument.
+#
+# !--a-prefix
+#   Removes all arguments beginning with "--a-prefix" from the command line.
+#
+# NAME=some value
+#   Sets the environment variable "NAME" to the value "some value". As above, do
+#   not quote the value unless you want the quotes to appear verbatim in the
+#   variable's value.
+#
+# Directives are applied in the order they appear (i.e. to change a flag, first
+# delete it and then re-add it with the desired value).
+#
+# To wrap Chrome within another command (e.g. strace), see CHROME_COMMAND_FLAG
+# in /etc/init/ui.conf.
+#
+# Note: Options enabled here might not show up in chrome://flags.  Consult the
+# chrome://version page to verify the full command line flags used at runtime.
+#
+################################################################################
+# This file should only be modified by hand by developers on their local
+# dev-mode devices; do not check in changes to it or write code that modifies
+# it. Permanent changes to Chrome's configuration, including conditionally-set
+# flags, should be made in session_manager (see chrome_setup.h).
+################################################################################

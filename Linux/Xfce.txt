@@ -1,0 +1,15 @@
+HORA:%H:%M:%S 
+Mensaje emergente de la Hora: %H:%M:%S del %A %d de %B de %Y
+
+Instalar Iconos a Plug-In Clima Xfce4:
+/home/gerardohd/.config/xfce4/weather/icons
+
+Terminal desplegable en XFCE:
+Añadir en configuracion del teclado de Xfce:
+xfce4-terminal --drop-down
+y asignar tecla
+
+Abrir Whisker Menu con una tecla:
+Añadir en configuracion del teclado de Xfce:
+xfce4-popup-whiskermenu
+y asignar tecla

@@ -1,0 +1,11 @@
+Las extensiones están almacenadas en:
+~/.local/share/gnome-shell/extensions/
+
+Desactivar todas las extensiones de Gnome Shell
+gsettings set org.gnome.shell disable-user-extensions true
+
+Configurar tap-to-click en gdm:
+su - gdm -s /bin/sh
+export $(dbus-launch)
+GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
+exit

@@ -1,0 +1,57 @@
+Change Your Android's Screen Resolution Without Root Access:
+http://android.wonderhowto.com/how-to/change-your-androids-screen-resolution-without-root-access-0160439/
+
+Particionar la tarjeta Micro SD para el almacenamiento adoptable:
+Adaptado de: https://android.stackexchange.com/questions/145457/i-want-to-split-one-microsd-card-into-two-parts-part-adoptable-storage-and-par
+adb shell sm list-disks adoptable
+adb shell sm partition disk:179,128 mixed XX
+adb shell sm partition disk:179,128 mixed 45
+
+Iniciar respaldo a Google Drive:
+adb shell bmgr backupnow --all
+adb shell bmgr fullbackup
+Desde el teléfono:
+bmgr backupnow --all
+
+Iniciar Servidor Shizuku Manager:
+adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh
+
+System UI Tuner:
+adb shell pm grant com.zacharee1.systemuituner android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.zacharee1.systemuituner android.permission.DUMP
+adb shell pm grant com.zacharee1.systemuituner android.permission.PACKAGE_USAGE_STATS
+
+Fluid Navigation Gestures:
+adb shell pm grant com.fb.fluid android.permission.WRITE_SECURE_SETTINGS
+
+MacroDROID:
+adb shell pm grant com.arlosoft.macrodroid android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.arlosoft.macrodroid android.permission.CHANGE_CONFIGURATION
+
+System UI Tuner: 
+adb shell am start com.android.systemui/com.android.systemui.DemoMode
+
+Enable Gesture Navigation:
+adb shell cmd overlay enable com.android.internal.systemui.navbar.gestural
+
+Auto Dark Theme:
+adb shell pm grant com.cannic.apps.automaticdarktheme android.permission.WRITE_SECURE_SETTINGS
+
+Instalar Pokemon Sidekick Wallpapers:
+adb install-multiple -r .\base_7.0-PranavPandey.apk .\split_config.arm64_v8a-PP.apk .\split_pokemon-PP.apk .\split_pokemon.config.arm64_v8a-PP.apke
+
+Nav Bar:
+Ir a Home:
+am start -a android.intent.action.MAIN -c android.intent.category.HOME 
+Poner modo inmersivo Permanente:
+adb shell settings put global policy_control immersive.navigation=*  
+Revertir:
+adb shell settings put global policy_control null*
+Abrir vista general:
+input keyevent 187
+Abrir Home:
+input keyevent 3
+Ir atrás:
+input keyevent 4 
+Fuente:
+https://developer.android.com/reference/android/view/KeyEvent

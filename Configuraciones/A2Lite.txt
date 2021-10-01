@@ -1,0 +1,129 @@
+Apps:
+ASUS Router
+Authy
+Banco Azteca
+BanCoppel Express
+Bitwarden
+Boost
+Crossy Road
+Documentos
+Drive
+Epson iPrint
+Facebook
+Files
+Fing
+Fit
+Fotos
+Gmail
+Grindr
+HBO Max
+Hyperburner
+Inoreader
+Instagram
+IPTV Pro
+Journey
+Kindle
+Maps
+Mensajes
+Messenger
+Mi Fit
+Mi Negocio
+Mi Remoto
+myTuner Radio
+Netflix
+Notas de Keep
+Noticias 
+Office
+OneDrive
+Oto Music
+Play Juegos
+Pocket
+(Google) Podcasts
+Reloj
+Sololearn
+Spotify
+Star Walk 2
+TikTok
+Traductor
+Tumblr
+Twitter
+UnDosTres
+WhatsApp
+YouTube
+
+Reiniciar dispositivo
+
+Copiar:
+Instalar Google Sounds$version.apk
+/Portrait > /Pictures/
+Foto de perfil > /Pictures/
+/Music
+
+Desactivar:
+Android Auto: pm disable-user --user 0 com.google.android.projection.gearhead
+ASUS Router: pm disable-user --user 0 com.asus.aihome
+Comentarios: pm disable-user --user 0 com.miui.bugreport
+Consejos de pantalla inicial: pm disable-user --user 0 com.android.protips
+Etiquetas: pm disable-user --user 0 com.google.android.tag
+Fintonic: pm disable-user --user 0 com.fintonic
+FM Radio: pm disable-user --user 0 com.caf.fmradio
+ Grindr: pm disable-user --user 0 com.grindrapp.android
+Mi Community : pm disable-user --user 0 com.mi.global.bbs
+myTunerRadio: pm disable-user --user 0 com.appgeneration.itunerfree
+ Office: pm disable-user --user 0 com.microsoft.office.officehubrow
+ OneDrive: pm disable-user --user 0 com.microsoft.skydrive
+Protector fotos: pm disable-user --user 0 com.android.dreams.phototable
+Servicio de impresión predeterminado: pm disable-user --user 0 com.android.bips
+Sololearn: pm disable-user --user 0 com.sololearn
+Star Walk 2: pm disable-user --user 0 com.vitotechnology.StarWalk2Free
+UnDosTres: pm disable-user --user 0 www.undostres.com.mx
+
+Sonidos:
+Llamada: (Nave espacial) (Crujido) (Lollipop>Nueva Aventura) your_new_adventure
+Notificación: (Tenis de Mesa) (Nota Final) (Eureka)
+Alarma: (Mañana brillante) (Nuevo comienzo)
+-------------------------------------------------------------------------------------------------
+Authy: (Oscilación de Piano)
+Banco Azteca: (Monedas)
+Bienestar Digital: (Campanilla)
+Boost: (Hoja)
+-Calendario de Google: (Ciclista)
+Chrome - Descarga completada: (Palomitas)
+Comentarios-Xiaomi: (Paseo en Bicicleta)
+Facebook: (Hey) Facebook
+Fintonic: (Polen)
+Google Fit: Rhea (Monedas)
+Google Fotos: Iapetus (Raíces)
+Gmail: 
+ Google: Shopkeeper(Nuevo Cliente)
+ Hotmail: (Fruta)
+ Outlook: Brote
+Google: (Ping)
+Google Drive: (Cencerro)
+Grindr: (Magia) / Taps (Bienvenida) Grindr
+HBO Max: (Mazo)
+Instagram: (Vástago)
+-Journey: (Bulbo)
+Kindle: (Inicios)
+-Medium: (Inicios)
+Mensajes: (Dueto)
+Messenger: Messenger
+Netflix: Alya (Tintineo)
+Noticias: (Cambio de tono)
+Play Store: (Golpecito)
+Podcasts: (Gong Suave)
+Servicios de Google Play:
+ Actualización del Sistema: (¡Bingo!) 
+ Acc. Nec. En Cuenta: (Ave ridícula)
+ Find my device: (Mariposa)
+ Mensajes para acceder: (Ave ridícula)
+ Smart Lock: (Bulbo)
+Star Walk 2: (Tallo)
+-Telegram: 
+  Grupos: (Flor)
+TikTok: (Globo) TikTok
+Tumblr: (Hechizo)
+Twitter: (Tuit)
+Whatsapp: Pipes(Órgano) 
+  Llamadas: your_new_adventure
+Youtube: (Repique)
