@@ -1,0 +1,73 @@
+#!/bin/bash
+https://linuskarlsson.se/blog/secure-boot-when-dual-booting-arch-linux-and-windows/
+
+Requerimientos: sudo pacman -S sbsigntools efitools
+
+mkdir -p efitools/efi-keys-PKI-Labs
+mkdir -p efitools/efi-keys-PKI/
+cd ~/efitools/efi-keys-PKI-Labs/
+
+$ uuidgen --random > guid.txt
+
+$ openssl req -newkey rsa:2048 -nodes -keyout pk.key -new -x509 -sha256 -days 3650 -subj "/CN=GerardoHD Platform Key/" -out pk.pem
+$ openssl x509 -outform DER -in pk.pem -out pk.crt
+$ cert-to-efi-sig-list -g "$(< guid.txt)" pk.pem pk.esl
+
+$ openssl req -newkey rsa:2048 -nodes -keyout kek.key -new -x509 -sha256 -days 3650 -subj "/CN=GerardoHD Key Exchange Key/" -out kek.pem
+$ openssl x509 -outform DER -in kek.pem -out kek.crt
+$ cert-to-efi-sig-list -g "$(< guid.txt)" kek.pem kek.esl
+
+$ openssl req -newkey rsa:2048 -nodes -keyout db_arch.key -new -x509 -sha256 -days 3650 -subj "/CN=GerardoHD Signature DB Key, Arch/" -out db_arch.pem
+$ openssl x509 -outform DER -in db_arch.pem -out db_arch.crt
+$ cert-to-efi-sig-list -g "$(< guid.txt)" db_arch.pem db_arch.esl
+
+$ curl -L -o MicCorKEKCA2011_2011-06-24.crt 'https://go.microsoft.com/fwlink/?LinkId=321185'
+$ openssl x509 -inform DER -outform PEM -in MicCorKEKCA2011_2011-06-24.crt -out MicCorKEKCA2011_2011-06-24.pem
+$ cert-to-efi-sig-list -g 77fa9abd-0359-4d32-bd60-28f4e78f784b MicCorKEKCA2011_2011-06-24.pem MicCorKEKCA2011_2011-06-24.esl
+
+$ curl -OL https://www.microsoft.com/pkiops/certs/MicWinProPCA2011_2011-10-19.crt
+$ curl -OL https://www.microsoft.com/pkiops/certs/MicCorUEFCA2011_2011-06-27.crt
+$ openssl x509 -inform DER -outform PEM -in MicWinProPCA2011_2011-10-19.crt -out MicWinProPCA2011_2011-10-19.pem
+$ openssl x509 -inform DER -outform PEM -in MicCorUEFCA2011_2011-06-27.crt -out MicCorUEFCA2011_2011-06-27.pem
+$ cert-to-efi-sig-list -g 77fa9abd-0359-4d32-bd60-28f4e78f784b MicWinProPCA2011_2011-10-19.pem MicWinProPCA2011_2011-10-19.esl
+$ cert-to-efi-sig-list -g 77fa9abd-0359-4d32-bd60-28f4e78f784b MicCorUEFCA2011_2011-06-27.pem MicCorUEFCA2011_2011-06-27.esl
+$ cat MicWinProPCA2011_2011-10-19.esl MicCorUEFCA2011_2011-06-27.esl > microsoft_db.esl
+
+$ sign-efi-sig-list -g "$(< guid.txt)" -k pk.key -c pk.pem PK pk.esl pk.auth
+$ sign-efi-sig-list -g "$(< guid.txt)" -k pk.key -c pk.pem KEK kek.esl kek.auth
+$ sign-efi-sig-list -g "$(< guid.txt)" -k kek.key -c kek.pem db db_arch.esl db_arch.auth
+
+$ sign-efi-sig-list -g "$(< guid.txt)" -c pk.pem -k pk.key PK /dev/null remove_pk.auth
+Sign Microsoft’s keys with your PK and KEK respectively. Again, note the use of the append flag -a
+
+$ sign-efi-sig-list -a -g 77fa9abd-0359-4d32-bd60-28f4e78f784b -k pk.key -c pk.pem KEK MicCorKEKCA2011_2011-06-24.esl MicCorKEKCA2011_2011-06-24.auth
+$ sign-efi-sig-list -a -g 77fa9abd-0359-4d32-bd60-28f4e78f784b -k kek.key -c kek.pem db microsoft_db.esl microsoft_db.auth
+
+
+# sudo sbsign --key db_arch.key --cert db_arch.pem --output /boot/vmlinuz-linux /boot/vmlinuz-linux
+# sudo sbsign --key db_arch.key --cert db_arch.pem --output /boot/EFI/BOOT/BOOTX64.EFI /boot/EFI/BOOT/BOOTX64.EFI
+# sudo sbsign --key db_arch.key --cert db_arch.pem --output /boot/EFI/systemd/systemd-bootx64.efi /boot/EFI/systemd/systemd-bootx64.efi
+
+cd ~
+
+# cp *.auth ~/efitools/efi-keys-PKI/
+# cp *.esl ~/efitools/efi-keys-PKI/
+# sudo cp -rf ~/efitools/efi-keys-PKI/ /boot
+# sudo cp -rf ~/efitools/efi-keys/ /etc/
+# sudo cp /usr/share/efitools/efi/KeyTool.efi /boot/EFI/BOOT/
+# sudo sbsign --key db_arch.key --cert db_arch.pem --output /boot/EFI/BOOT/KeyTool.efi /boot/EFI/BOOT/KeyTool.efi
+
+Clear the current Secure Boot keys. This puts your Secure Boot in “Setup mode”, ready to accept new keys.
+Reboot and launch KeyTool.
+Follow the instructions at http://www.rodsbooks.com/efi-bootloaders/controlling-sb.html#keytool to enroll keys using KeyTool.
+After enrolling the PK (which you should do last), reboot into UEFI Setup Utility and enable Secure Boot. I had to do this manually, even though KeyTool said that it was enabled after enrolling the PK.
+Enroll the DB files. Start with the first signed DB-file (the one created without the -a flag, in this case db_arch.{esl,auth}
+Add the remaining DB files, in this case microsoft_db.{esl,auth}.
+Do the same thing for the KEKs. Start with your own KEK, then add Microsoft’s KEK.
+Finally, add your PK. This should be added last, since after this Secure Boot will go back to “User mode” where signatures are enforced.
+Note that you should not enroll the file remove_pk.auth which will remove the PK. Save it somewhere safe if you need it in the future.
+If you wish to test that Secure Boot works correctly, try to launch the (unsigned) Keytool binary. It should not boot but instead give an error message containing the text Security Policy Violation
+You should now be finished with configuring Secure Boot on your system!
+-------------------------------------------------------
+Descargar hook para Secure-boot
+sudo wget -c https://raw.githubusercontent.com/GerardoHD/Linux/master/Scripts/Arch/Hooks/101-sign_files_for_secure_boot.hook -O /usr/share/libalpm/hooks/101-sign_files_for_secure_boot.hook
