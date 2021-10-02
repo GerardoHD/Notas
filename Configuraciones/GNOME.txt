@@ -1,8 +1,21 @@
+#Configuraciones comunes para GNOME
+
+Iniciar sesión en Google Chrome, configurar Integración con GNOME Shell, crear accesos directos de Google Keep y fijarla al dock
+
+En Extensiones activar:
+Applications Menu
+Mpris Indicator Button
+Places Status Indicator
+Removable Drive Menu
+
 Nautilus:
 Colocar carpetas antes que los archivos
 Descripciones de la vista de iconos: Mostrar modificado: fecha
 Columnas de la lista: Mostrar modificado: fecha
 Predeterminar gedit como aplicación para editar texto
+Configurar iconos de carpetas;
+Git = Git
+AUR = Code
 
 Gedit:
 Resaltar parejas de corchetes

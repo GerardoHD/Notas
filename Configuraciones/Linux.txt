@@ -1,0 +1,7 @@
+#Configuraciones comunes para Linux
+
+Copiar desde Google Drive:
+/GerardoHD/Wallpapers-S/Landscape/* ~/.local/share/backgrounds/
+/GerardoHD/Badges/$current-profile-picture ~/Imágenes/
+
+Configurar aplicaciones predeterminadas, fondo de pantalla, e imagen de perfil, cambiar nombre de usuario en Configuración

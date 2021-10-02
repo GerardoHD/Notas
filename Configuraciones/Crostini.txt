@@ -1,4 +1,7 @@
+#Configuraciones comunes para Crostini
+
 Configurar Git
+Aplicar configuración de GNOME
 
 Enlazar carpetas con Crostini:
 ln -sf /mnt/chromeos/MyFiles/Downloads/ ~/Descargas

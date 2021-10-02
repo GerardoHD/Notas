@@ -1,21 +1,8 @@
-Configurar Git
+#Configuraciones comunes para Arch Linux
 
-Iniciar sesión en Google Chrome, configurar Integración con GNOME Shell, crear accesos directos de Google Keep y fijarla al dock
-
-En Extensiones activar:
-Applications Menu
-Mpris Indicator Button
-Pamac Updates Indicator
-Places Status Indicator
-Removable Drive Menu
-
-Configurar Git
-
-Copiar desde Google Drive:
-/GerardoHD/Wallpapers-S/Landscape/* ~/.local/share/backgrounds/
-/GerardoHD/Badges/$current-profile-picture ~/Imágenes/
-
-Configurar aplicaciones predeterminadas, fondo de pantalla, e imagen de perfil, cambiar nombre de usuario en Configuración
+Aplicar configuración de Git
+Aplicar configuración de GNOME
+Aplicar configuración de Linux
 
 Activar soporte AUR en pamac-aur
 
@@ -65,7 +52,6 @@ Distribución de los botones de diálogo: GNOME
 Distribución del teclado: GNOME
 
 -------------------------------------------
-
 Firmar archivos del arch_iso para Secure Boot
 sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI
 
