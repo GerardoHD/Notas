@@ -1,12 +1,12 @@
-https://github.com/sebanc/brunch
+https://github.com/sebanc/brunch/blob/master/README.md
 
 Particiones:
 /dev/sda1 EFI/ESP 	256M
 /dev/sda2 Windows 	80G
-/dev/sda3 Swap			4G
-/dev/sda4 Arch Linux 38G
+/dev/sda3 Swap		4G
+/dev/sda4 Arch Linux	38G
 /dev/sda5 Datos		262G
-/dev/sda6 Brunch		54G
+/dev/sda6 Brunch	54G
 -------------------------------------------------
 Instalar Brunch a HDD o USB:
 
