@@ -18,6 +18,7 @@ Git = Git
 AUR = Code
 
 Gedit:
+Mostrar números de línea
 Resaltar parejas de corchetes
 Activar complementos:
 Apertura rápida

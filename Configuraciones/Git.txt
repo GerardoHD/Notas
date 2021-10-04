@@ -3,8 +3,8 @@
 mkdir Git
 cd Git
 #
-git config --global user.email gerardoherreradiaz@gmail.com
-git config --global user.name GerardoHD
+git config --global user.email username@server.com
+git config --global user.name username
 git config --global color.ui true
 git config --global core.editor vim
 #
@@ -12,6 +12,7 @@ git clone https://github.com/GerardoHD/Notas.git
 git clone https://github.com/GerardoHD/Linux.git
 git clone https://github.com/GerardoHD/Internet-TV.git
 git clone https://github.com/LaQuay/TDTChannels.git
+#
 #git clone https://github.com/iptv-org/iptv.git
 git clone https://github.com/CleoMenezes/Custom-Adwaita-Folder-Icons.git
 sudo cp Custom-Adwaita-Folder-Icons/*.png /usr/share/icons

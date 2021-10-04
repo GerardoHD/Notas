@@ -1,6 +1,6 @@
 #Configuraciones comunes para Crostini
 
-Configurar Git
+Aplicar configuración de Git
 Aplicar configuración de GNOME
 
 Enlazar carpetas con Crostini:
@@ -16,3 +16,10 @@ Vim
 Administrar impresión
 Avahi *
 Qt V4L2 *
+
+Debian:
+Instalar flathub.flatpakrepo
+Con menulibre esconder entrada de
+Controladores adicionales
+Software Updates
+
