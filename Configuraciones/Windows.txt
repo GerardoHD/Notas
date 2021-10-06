@@ -193,3 +193,4 @@ Episodios:
 E:/Filebot/TV/{ny}/{'Season '+s}/{n} - {s00e00} - {t}
 Musica: 
 E:/Filebot/Music/{n}/{album} {[y]}/{pi.pad(2)+' - '} {t}
+
