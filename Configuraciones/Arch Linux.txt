@@ -26,23 +26,6 @@ ln -sf /run/media/gerardohd/Datos/GerardoHD/Imagenes 	/home/gerardohd/Imágenes/
 ln -sf /run/media/gerardohd/Datos/GerardoHD/Musica 	/home/gerardohd/Música/
 ln -sf /run/media/gerardohd/Datos/GerardoHD/Videos 	/home/gerardohd/Vídeos/
 
-Usar menulibre y desactivar entradas de:
-Vim
-Administrar impresión
-Controles parentales
-Hardware Locality lstopo
-Navegador Zeroconf de Avahi
-Examinador de servidores SSH de Avahi
-Examinador de servidores VNC de Avahi
-E-book editor
-E-book viewer
-LRF viewer
-CMake
-Qt V4L2 test Utility
-Qt V4L2 video capture utility
-Configuración de red avanzada
-Configuración de impresión
-
 Configurar tema KvGnome en Kvantum Manager
 Configurar qt5ct:
 Estilo: kvantum
