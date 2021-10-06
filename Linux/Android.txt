@@ -7,12 +7,6 @@ adb shell sm list-disks adoptable
 adb shell sm partition disk:179,128 mixed XX
 adb shell sm partition disk:179,128 mixed 45
 
-Iniciar respaldo a Google Drive:
-adb shell bmgr backupnow --all
-adb shell bmgr fullbackup
-Desde el teléfono:
-bmgr backupnow --all
-
 Iniciar Servidor Shizuku Manager:
 adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh
 
@@ -55,3 +49,7 @@ Ir atrás:
 input keyevent 4 
 Fuente:
 https://developer.android.com/reference/android/view/KeyEvent
+
+Tomar captura de pantalla con adb:
+adb shell screencap -p /sdcard/captura.png
+adb pull /sdcard/captura.png
