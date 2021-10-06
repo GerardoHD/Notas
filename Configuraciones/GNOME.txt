@@ -10,6 +10,7 @@ Removable Drive Menu
 
 Nautilus:
 Colocar carpetas antes que los archivos
+Permitir expandir las carpetas
 Descripciones de la vista de iconos: Mostrar modificado: fecha
 Columnas de la lista: Mostrar modificado: fecha
 Predeterminar gedit como aplicación para editar texto

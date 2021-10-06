@@ -179,12 +179,9 @@ Copiar D:\Windows\Varios\toolbar.png C:\ProgramFiles\MPC-HC\
 --------------------------------------------------------------
 Seriales:
 Halo CE:
-G9QK2-22KV6-TFXCR-V3Y9M-2CCBJ
-UltraISO: 
-3683-C3CB-56C8-7DF4
-AOMEI Partition Assistant: AOPR-9F9F9-D7R09-F98F9
+UltraISO:
+AOMEI Partition Assistant:
 Doom 3:
-Q7G4-ALZ9-N5NV-Z98S-C4
 
 Filebot:
 Peliculas: 

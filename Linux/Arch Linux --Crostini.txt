@@ -55,7 +55,7 @@ vmc stop termina
 
 ==========================
 Reiniciar dispositivo
-Abrir terminal, si todo funciona correctamente cambiar contenedores:
+Abrir terminal, y si todo funciona correctamente renombrar contenedores:
 
 lxc stop arch
 lxc stop penguin
@@ -64,3 +64,7 @@ lxc rename arch penguin
 exit
 vmc list
 vmc stop termina
+
+##################
+Ejecutar flatpak
+https://www.reddit.com/r/Crostini/comments/gfi45d/flatpak_broken_on_m83beta_830410342/
