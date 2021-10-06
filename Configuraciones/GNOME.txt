@@ -19,6 +19,7 @@ AUR = Code
 
 Gedit:
 Mostrar números de línea
+Resaltar línea actual
 Resaltar parejas de corchetes
 Activar complementos:
 Apertura rápida
