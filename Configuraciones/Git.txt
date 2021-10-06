@@ -15,10 +15,12 @@ git clone https://github.com/LaQuay/TDTChannels.git
 #
 #git clone https://github.com/iptv-org/iptv.git
 git clone https://github.com/CleoMenezes/Custom-Adwaita-Folder-Icons.git
-sudo cp Custom-Adwaita-Folder-Icons/*.png /usr/share/icons
-#
-Realizar algún cambio y commit para que se guarde el token de Github
-Token de Github:
-git config --global credential.helper store
+sudo mkdir -p /usr/share/icons/Custom-Adwaita-Folder-Icons
+sudo cp Custom-Adwaita-Folder-Icons/Icons/*.png /usr/share/icons/Custom-Adwaita-Folder-Icons
 #
 cd ~
+#
+
+Realizar algún cambio y commit para que se guarde el token de Github
+git config --global credential.helper store
+Token de Github: 
