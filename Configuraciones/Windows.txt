@@ -1,3 +1,5 @@
+Cambiar nombre del sistema
+
 Abrir Windows Update y actualizar
 
 En cambiar sonidos del sistema, activar Reproducir sonido inicio de Windows
