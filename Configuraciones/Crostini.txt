@@ -1,25 +1,13 @@
 #Configuraciones comunes para Crostini
 
+Enlazar carpetas con Crostini:
+ln -sf /mnt/chromeos/MyFiles/Downloads/ ~/Descargas
+ln -sf /mnt/chromeos/PlayFiles/Music/ ~/Música
+
 Aplicar configuración de Git
 Aplicar configuración de GNOME
 
-Enlazar carpetas con Crostini:
-ln -sf /mnt/chromeos/MyFiles/Downloads/ ~/Descargas
-
-Si menulibre no se ejecuta correctamente:
-echo $XDG_MENU_PREFIX
-export XDG_MENU_PREFIX="gnome-"
-menulibre
-
-Usar menulibre y desactivar entradas de:
-Vim
-Administrar impresión
-Avahi *
-Qt V4L2 *
+Añadir a marcadores la carpeta MyDrive
 
 Debian:
 Instalar flathub.flatpakrepo
-Con menulibre esconder entrada de
-Controladores adicionales
-Software Updates
-
