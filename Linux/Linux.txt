@@ -53,6 +53,12 @@ sudo add-apt-repository multiverse
 sudo apt update
 sudo apt install fatresize
 
+Listar todos los paquetes instalados por apt:
+sudo apt list --installed >> apt.txt
+
+Listar todos los paquetes instalados por pacman:
+pacman -Q >> pacman.txt
+
 Verificar carga de microcode intel:
 dmesg | grep microcode
 
@@ -64,8 +70,16 @@ pacstrap -C /mnt/etc/pacman.conf -i -M /mnt base
 arch-chroot /mnt
 pacman -Syu
 
+Si menulibre no se ejecuta correctamente:
+echo $XDG_MENU_PREFIX
+export XDG_MENU_PREFIX="gnome-"
+menulibre
+
 Intentar borrar historial git:
 Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the following:
+
+Si ping no funciona:
+sudo chmod 4711 /usr/bin/ping
 
 Checkout
 
