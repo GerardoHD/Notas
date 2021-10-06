@@ -16,6 +16,7 @@ git clone https://github.com/LaQuay/TDTChannels.git
 #git clone https://github.com/iptv-org/iptv.git
 git clone https://github.com/CleoMenezes/Custom-Adwaita-Folder-Icons.git
 sudo mkdir -p /usr/share/icons/Custom-Adwaita-Folder-Icons
+sudo rm /usr/share/icons/Custom-Adwaita-Folder-Icons/*.png
 sudo cp Custom-Adwaita-Folder-Icons/Icons/*.png /usr/share/icons/Custom-Adwaita-Folder-Icons
 #
 cd ~
