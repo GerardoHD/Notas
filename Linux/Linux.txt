@@ -20,7 +20,7 @@ El archivo de configuración del demonio SSH se puede encontrar y editar en /etc
 Para permitir el acceso sólo a algunos usuarios añadir esta línea:
 AllowUsers    user1 user2
 Para conectarse a un servidor, ejecuta:
-$ ssh -p port user@server-address
+$ ssh -p 22 gerardohd@192.168.1.9
 
 Para conectarnos a una red inalambrica con Network Manager:
 $ nmcli d wifi connect "SSID" password "contraseña"
@@ -54,10 +54,10 @@ sudo apt update
 sudo apt install fatresize
 
 Listar todos los paquetes instalados por apt:
-sudo apt list --installed >> apt.txt
+sudo apt list --installed >> ~/Descargas/Downloads/GerardoHD/apt.txt
 
 Listar todos los paquetes instalados por pacman:
-pacman -Q >> pacman.txt
+pacman -Q >> ~/Descargas/Downloads/GerardoHD/pacman.txt
 
 Verificar carga de microcode intel:
 dmesg | grep microcode
@@ -75,11 +75,14 @@ echo $XDG_MENU_PREFIX
 export XDG_MENU_PREFIX="gnome-"
 menulibre
 
-Intentar borrar historial git:
-Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the following:
-
 Si ping no funciona:
 sudo chmod 4711 /usr/bin/ping
+
+Eliminar cache de flatpak:
+sudo rm -rf /var/tmp/flatpak-cache*
+
+Intentar borrar historial git:
+Deleting the .git folder may cause problems in your git repository. If you want to delete all your commit history but keep the code in its current state, it is very safe to do it as in the following:
 
 Checkout
 

@@ -8,6 +8,3 @@ Aplicar configuración de Git
 Aplicar configuración de GNOME
 
 Añadir a marcadores la carpeta MyDrive
-
-Debian:
-Instalar flathub.flatpakrepo
