@@ -1,14 +1,36 @@
 #!/bin/bash
 
+sudo poweroff
+
 ctrl-alt-t
 
-vmc start termina
+vsh termina
+
+df -hT
+
+lxc list
 
 lxc stop penguin
 
-lxc launch images:archlinux arch
+lxc delete penguin
 
-lxc exec arch -- bash
+lxc image list
+
+lxc image delete $FINGERPRINT
+
+df -hT
+
+exit
+
+vmc stop termina
+
+vmc start termina
+
+lxc launch images:archlinux penguin
+
+lxc config set penguin security.nesting true
+
+lxc exec penguin -- bash
 
 #
 ip -4 a show dev eth0
@@ -17,7 +39,7 @@ ip -4 a show dev eth0
 #   empty output = proceed below
 dhcpcd eth0
 ping -c 3 archlinux.org
-sudo pacman -Syu dhclient
+sudo pacman -Syu --noconfirm dhclient
 sudo systemctl enable --now dhclient@eth0
 #
 
@@ -31,9 +53,9 @@ sudo poweroff
 
 ==========================
 
-lxc start arch
+lxc start penguin
 
-lxc console arch
+lxc console penguin
 
 #Distros-Setup / Etapa 2
 
@@ -41,9 +63,9 @@ sudo poweroff
 
 ==========================
 
-lxc start arch
+lxc start penguin
 
-lxc console arch
+lxc console penguin
 
 #Distros-Setup / Etapa 3
 
@@ -53,18 +75,9 @@ exit
 
 vmc stop termina
 
-==========================
-Reiniciar dispositivo
-Abrir terminal, y si todo funciona correctamente renombrar contenedores:
-
-lxc stop arch
-lxc stop penguin
-lxc rename penguin google
-lxc rename arch penguin
-exit
-vmc list
-vmc stop termina
-
 ##################
-Ejecutar flatpak
-https://www.reddit.com/r/Crostini/comments/gfi45d/flatpak_broken_on_m83beta_830410342/
+
+lxc storage list
+lxc storage info $NAME
+lxc image list
+lxc delete $FINGERPRINT
