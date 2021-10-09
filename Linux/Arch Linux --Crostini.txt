@@ -45,7 +45,7 @@ sudo systemctl enable --now dhclient@eth0
 
 pacman -Syyu --noconfirm base-devel dialog wget git sudo vim
 
-curl -L https://git.io/JzpKF | bash
+curl -L https://git.io/JrQil | bash
 
 #Distros-Setup / Etapa 1
 
@@ -74,10 +74,3 @@ sudo poweroff
 exit
 
 vmc stop termina
-
-##################
-
-lxc storage list
-lxc storage info $NAME
-lxc image list
-lxc delete $FINGERPRINT
