@@ -14,9 +14,23 @@ lxc stop penguin
 
 lxc delete penguin
 
+sleep 2m
+
+df -hT
+
+exit
+
+vmc stop termina
+
+vmc start terminaI
+
+df -hT
+
 lxc image list
 
 lxc image delete $FINGERPRINT
+
+sleep 2m
 
 df -hT
 
@@ -25,6 +39,8 @@ exit
 vmc stop termina
 
 vmc start termina
+
+df -hT
 
 lxc launch images:archlinux penguin
 
@@ -47,7 +63,7 @@ pacman -Syyu --noconfirm base-devel dialog wget git sudo vim
 
 curl -L https://git.io/JrQil | bash
 
-#Distros-Setup / Etapa 1
+#Distro-Setup / Etapa 1
 
 sudo poweroff
 
@@ -57,7 +73,7 @@ lxc start penguin
 
 lxc console penguin
 
-#Distros-Setup / Etapa 2
+#Distro-Setup / Etapa 2
 
 sudo poweroff
 
@@ -67,10 +83,17 @@ lxc start penguin
 
 lxc console penguin
 
-#Distros-Setup / Etapa 3
+#Distro-Setup / Etapa 3
 
 sudo poweroff
 
 exit
 
 vmc stop termina
+
+##################
+lxc image list images:
+lxc storage list
+lxc storage info $NAME
+lxc image list
+lxc delete $FINGERPRINT

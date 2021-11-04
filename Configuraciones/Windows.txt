@@ -178,10 +178,7 @@ Copiar D:\Windows\Varios\toolbar.png C:\ProgramFiles\MPC-HC\
 
 --------------------------------------------------------------
 Seriales:
-Halo CE:
-UltraISO:
-AOMEI Partition Assistant:
-Doom 3:
+
 
 Filebot:
 Peliculas: 

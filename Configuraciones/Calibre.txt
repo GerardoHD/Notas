@@ -108,3 +108,4 @@ Password: Your app password
 Encryption: SSL
 Send yourself a test email and hopefully it’ll arrive!
 
+

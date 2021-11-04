@@ -16,6 +16,10 @@ Columnas de la lista: Mostrar modificado: fecha
 Configurar iconos de carpetas;
 Git = Git
 AUR = Code
+Internet-TV = Playlist
+Linux = Script
+Notas = Synchronizing
+TDTChannels = Multimedia
 
 Gedit:
 Mostrar números de línea

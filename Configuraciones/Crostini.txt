@@ -2,9 +2,13 @@
 
 Enlazar carpetas con Crostini:
 ln -sf /mnt/chromeos/MyFiles/Downloads/ ~/Descargas
-ln -sf /mnt/chromeos/PlayFiles/Music/ ~/Música
+ln -sf /mnt/chromeos/MyFiles/GerardoHD/Documentos/ ~/Documentos
+ln -sf /mnt/chromeos/MyFiles/GerardoHD/Imágenes/ ~/Imágenes
+ln -sf /mnt/chromeos/MyFiles/GerardoHD/Música/ ~/Música
+ln -sf /mnt/chromeos/MyFiles/GerardoHD/Vídeos/ ~/Vídeos
 
 Aplicar configuración de Git
 Aplicar configuración de GNOME
 
 Añadir a marcadores la carpeta MyDrive
+Añadir a marcadores la carpeta GerardoHD

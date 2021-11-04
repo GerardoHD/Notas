@@ -28,6 +28,7 @@ tar zxvf brunch_$version.tar.gz
 
 lsblk -e7
 
+cd /home/chronos/user/MyFiles/Downloads/Brunch-$version/
 sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sdb
 
 (En la advertencia de Secure Boot) "OK->Enroll key from disk->EFI-SYSTEM->brunch.der->Continue"
@@ -43,6 +44,8 @@ lsblk -e7
 
 mkdir -p /mnt/brunch
 sudo mount /dev/sda5 /mnt/brunch
+cd /home/chronos/user/MyFiles/Downloads/Brunch-$version/
+sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sdb
 sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /mnt/brunch/chromeos.img -s 39
 umount -R /mnt/brunch
 mkdir -p /mnt/efi
