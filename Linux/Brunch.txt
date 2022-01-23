@@ -2,11 +2,10 @@ https://github.com/sebanc/brunch/blob/master/README.md
 
 Particiones:
 /dev/sda1 EFI/ESP 	256M
-/dev/sda2 Windows 	80G
-/dev/sda3 Swap		4G
-/dev/sda4 Arch Linux	38G
-/dev/sda5 Datos		262G
-/dev/sda6 Brunch	54G
+/dev/sda2 Windows 	78G
+/dev/sda4 Arch Linux	40G
+/dev/sda5 Datos		268G
+/dev/sda6 ChromeOS	61G
 -------------------------------------------------
 Instalar Brunch a HDD o USB:
 
@@ -29,7 +28,10 @@ tar zxvf brunch_$version.tar.gz
 lsblk -e7
 
 cd /home/chronos/user/MyFiles/Downloads/Brunch-$version/
-sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sdb
+sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sda
+
+efibootmgr --create --disk /dev/sda --part 1 --label "ChromeOS" --loader "\efi\boot\bootx64.efi" --verbose
+vim /mnt/efi/efi/boot/grub.cfg
 
 (En la advertencia de Secure Boot) "OK->Enroll key from disk->EFI-SYSTEM->brunch.der->Continue"
 
@@ -38,22 +40,24 @@ Reiniciar equipo
 -------------------------------------------------
 Instalar ChromeOS en Dual Boot:
 
+sudo tune2fs -m 0 /dev/sda5
 Crear partición que sea al menos 12GB más grande que el espacio libre deseado.
 
 lsblk -e7
 
-mkdir -p /mnt/brunch
-sudo mount /dev/sda5 /mnt/brunch
+mkdir -p /mnt/ChromeOS
+sudo mount /dev/sda5 /mnt/ChromeOS
 cd /home/chronos/user/MyFiles/Downloads/Brunch-$version/
-sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /dev/sdb
-sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /mnt/brunch/chromeos.img -s 39
-umount -R /mnt/brunch
-mkdir -p /mnt/efi
-mount /dev/sdb12 /mnt/brunch
-mount /dev/sda1 /mnt/efi
-cp /mnt/brunch/* /mnt/efi
+sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /mnt/ChromeOS/ChromeOS.img -s 59
+umount -R /mnt/ChromeOS
+mkdir -p /mnt/ESP
+mount /dev/sda1 /mnt/ESP
+cp /mnt/brunch/* /mnt/ESP
 efibootmgr --create --disk /dev/sda --part 1 --label "ChromeOS" --loader "\efi\boot\bootx64.efi" --verbose
 vim /mnt/efi/efi/boot/grub.cfg
+umount -R /mnt/ESP
+rm -rf /mnt/ChromeOS
+rm -rf /mnt/ESP
 
 Eliminar contenido anterior del archivo, y pegar lo siguiente:
 
@@ -64,7 +68,7 @@ source /efi/boot/theme.cfg
 menuentry "ChromeOS" --class "brunch" {
         #rmmod tpm
         img_part=/dev/sda5
-        img_path=/chromeos.img
+        img_path=/ChromeOS.img
         search --no-floppy --set=root --file $img_path
         loopback loop $img_path
         linux (loop,7)/kernel boot=local noresume noswap loglevel=7 options=pwa \
