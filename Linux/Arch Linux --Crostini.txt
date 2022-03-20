@@ -14,7 +14,7 @@ lxc stop penguin
 
 lxc delete penguin
 
-sleep 2m
+sleep 4m
 
 df -hT
 
@@ -22,7 +22,7 @@ exit
 
 vmc stop termina
 
-vmc start terminaI
+vmc start termina
 
 df -hT
 
@@ -30,7 +30,7 @@ lxc image list
 
 lxc image delete $FINGERPRINT
 
-sleep 2m
+sleep 4m
 
 df -hT
 
@@ -97,3 +97,4 @@ lxc storage list
 lxc storage info $NAME
 lxc image list
 lxc delete $FINGERPRINT
+

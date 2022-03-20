@@ -92,13 +92,18 @@ menuentry 'Solus UUID' --class Solus --class gnulinux $menuentry_id_option 'ospr
 menuentry "ChromeOS" --class "brunch" {
         #rmmod tpm
         img_part=/dev/sda5
-        img_path=/chromeos.img
+        img_path=/ChromeOS.img
         search --no-floppy --set=root --file $img_path
         loopback loop $img_path
         linux (loop,7)/kernel boot=local noresume noswap loglevel=7 options=pwa \
                 cros_secure cros_debug loop.max_part=16 img_part=$img_part img_path=$img_path \
                 console= vt.global_cursor_default=0 brunch_bootsplash=default quiet
         initrd (loop,7)/lib/firmware/amd-ucode.img (loop,7)/lib/firmware/intel-ucode.img (loop,7)/initramfs.img
+}
+
+menuentry "dahliaOS" --class "unknown"{
+ set root=(hd0,1)
+ linux /bzImage root=PARTUUID=670E-EEB2 rootwait console=tty1
 }
 
 sudo fdisk -l
