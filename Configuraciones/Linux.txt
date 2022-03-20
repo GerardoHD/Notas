@@ -1,7 +1,84 @@
-#Configuraciones comunes para Linux
+Iniciar sesión en Google Chrome, configurar Integración con GNOME Shell, crear accesos directos de Google Keep y fijarla al dock
 
 Copiar desde Google Drive:
 /GerardoHD/Wallpapers-S/Landscape/* ~/.local/share/backgrounds/
 /GerardoHD/Badges/$current-profile-picture ~/Imágenes/
 
 Configurar aplicaciones predeterminadas, fondo de pantalla, e imagen de perfil, cambiar nombre de usuario en Configuración
+
+-----
+Terminal:
+Configurar tema del sistema
+Cambiar nombre al perfil predeterminado
+Configurar número de columnas: 92
+
+Configurar git en terminal:
+mkdir Git
+cd Git
+#
+git config --global user.email gerardoherreradiaz@gmail.com
+git config --global user.name GerardoHD
+git config --global color.ui true
+git config --global core.editor vim
+#
+git clone https://github.com/GerardoHD/Notas.git
+git clone https://github.com/GerardoHD/Linux.git
+git clone https://github.com/GerardoHD/Internet-TV.git
+git clone https://github.com/LaQuay/TDTChannels.git
+#
+#git clone https://github.com/iptv-org/iptv.git
+#git clone https://github.com/CleoMenezesJr/Custom-Adwaita-Folder-Icons.git
+#sudo mkdir -p /usr/share/icons/Custom-Adwaita-Folder-Icons
+#sudo rm /usr/share/icons/Custom-Adwaita-Folder-Icons/*.png
+#sudo cp Custom-Adwaita-Folder-Icons/Icons/*.png /usr/share/icons/Custom-Adwaita-Folder-Icons
+#
+cd ~
+#
+
+Realizar algún cambio y commit para que se guarde el token de Github
+git config --global credential.helper store
+Token de Github: 
+
+En Extensiones de GNOME Shell activar:
+Applications Menu
+Blur my Shell
+Mpris Indicator Button
+Places Status Indicator
+Removable Drive Menu
+User Themes
+
+Nautilus:
+Colocar carpetas antes que los archivos
+Permitir expandir las carpetas
+Descripciones de la vista de iconos: Mostrar modificado: fecha
+Columnas de la lista: Mostrar modificado: fecha
+#Configurar iconos de carpetas;
+#AUR = /usr/share/icons/Custom-Adwaita-Folder-Icons/Code.png
+#Git = /usr/share/icons/Custom-Adwaita-Folder-Icons/Git.png
+#Internet-TV = /usr/share/icons/Custom-Adwaita-Folder-Icons/Playlist.png
+#Linux = /usr/share/icons/Custom-Adwaita-Folder-Icons/Script.png
+#Notas = /usr/share/icons/Custom-Adwaita-Folder-Icons/Synchronizing.png
+#TDTChannels = /usr/share/icons/Custom-Adwaita-Folder-Icons/Multimedia.png
+
+Gedit:
+Mostrar números de línea
+Resaltar línea actual
+Resaltar parejas de corchetes
+Activar complementos:
+Apertura rápida
+Dibujar espacios
+Git
+Multiedición
+Terminal empotrado
+
+Seleccionar carpetas de Disco Duro Externo y copiar a /run/media/gerardohd/Datos/
+
+Configurar Discos de GNOME para que monte la partición de Datos en /run/media/gerardohd/Datos/
+
+Enlazar Carpetas de Medios:
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Descargas	/home/gerardohd/Descargas/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Documentos	/home/gerardohd/Documentos/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Imagenes 	/home/gerardohd/Imágenes/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Musica 	/home/gerardohd/Música/
+ln -sf /run/media/gerardohd/Datos/GerardoHD/Videos 	/home/gerardohd/Vídeos/
+	

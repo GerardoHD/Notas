@@ -1,7 +1,7 @@
 #Configuraciones comunes para Arch Linux
 
-Aplicar configuración de Git
 Aplicar configuración de GNOME
+Aplicar configuración de Git
 Aplicar configuración de Linux
 
 Activar soporte AUR en pamac-aur
@@ -15,17 +15,6 @@ cp BOOTX64.efi /efi/efi/Lenovo/Diagnostics.efi
 efibootmgr --create --disk /dev/sda --part 1 --label "Lenovo Diagnostics" --loader "\efi\efi\Lenovo\Diagnostics.efi" --verbose
 sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /efi/efi/Lenovo/Diagnostics.efi /efi/efi/Lenovo/Diagnostics.efi
 
-Seleccionar carpetas de Disco Duro Externo y copiar a /run/media/gerardohd/Datos/
-
-Configurar Discos de GNOME para que monte la partición de Datos en /run/media/gerardohd/Datos/
-
-Enlazar Carpetas de Medios:
-ln -sf /run/media/gerardohd/Datos/GerardoHD/Descargas	/home/gerardohd/Descargas/
-ln -sf /run/media/gerardohd/Datos/GerardoHD/Documentos	/home/gerardohd/Documentos/
-ln -sf /run/media/gerardohd/Datos/GerardoHD/Imagenes 	/home/gerardohd/Imágenes/
-ln -sf /run/media/gerardohd/Datos/GerardoHD/Musica 	/home/gerardohd/Música/
-ln -sf /run/media/gerardohd/Datos/GerardoHD/Videos 	/home/gerardohd/Vídeos/
-
 Configurar tema KvGnome en Kvantum Manager
 Configurar qt5ct:
 Estilo: kvantum
@@ -38,6 +27,4 @@ Distribución del teclado: GNOME
 Firmar archivos del arch_iso para Secure Boot
 sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/BOOTx64.EFI
 
-sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/arch/boot/x86_64/vmlinuz-linux /run/media/gerardohd/$YYYYMM/arch/boot/x86_64/vmlinuz-linux
-
-sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/$YYYYMM/EFI/BOOT/bootx64.efi /run/media/gerardohd/ARCH_$YYYYMM/EFI/BOOT/bootx64.efi
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /run/media/gerardohd/ARCH_$YYYYMM/arch/boot/x86_64/vmlinuz-linux /run/media/gerardohd/ARCH_$YYYYMM/arch/boot/x86_64/vmlinuz-linux

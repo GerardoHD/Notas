@@ -1,8 +1,20 @@
+https://blog.bitscry.com/2017/12/10/sending-books-to-a-kindle-from-gmail-in-calibre/
+Calibre can be set up to send via Gmail in the “Sharing books by email” section of the preferences.
+
+Device email: gerardohd-kp@kindle.com
+Send email from: gerardoherreradiaz@zohomail.com
+Hostname: smtp.zoho.com
+Port: 465
+Username: gerardoherreradiaz@zohomail.com
+Password: Your app password
+Encryption: SSL
+Send yourself a test email and hopefully it’ll arrive!
+
 Apariencia
 Interfaz principal;
 Tema de iconos: san_francisco
 Tamaño de icono: Pequeño
-Mostrar texto bajo los iconos: Si hay suficiente espacio
+Mostrar texto bajo los iconos: Siempre
 Activar el mostrar una rejilla en la lista de libros
 Desactivar el permitir arrastrar y soltar para unir los libros
 -
@@ -85,6 +97,10 @@ Escribir fechas en formato: %d %b, %Y
 Plantilla de guardado:
 {author_sort}/{series}{series_index}/{title}/{title} - {authors}
 
+gerardohd-kp@kindle.com
+AZW, MOBI, TPZ, PRC, AZW1, TXT, PDF
+Kindle Paperwhite 3 (2015)
+
 gerardohd-a2lite@kindle.com
 AZW, MOBI, TPZ, PRC, AZW1, TXT, PDF
 Xiaomi A2 Lite
@@ -92,20 +108,3 @@ Xiaomi A2 Lite
 gerardohd-c330@kindle.com
 AZW, MOBI, TPZ, PRC, AZW1, TXT, PDF
 Lenovo Ideapad C330
-
-gerardohd-kp@kindle.com
-AZW, MOBI, TPZ, PRC, AZW1, TXT, PDF
-Kindle Paperwhite 3 (2015)
-
-https://blog.bitscry.com/2017/12/10/sending-books-to-a-kindle-from-gmail-in-calibre/
-Calibre can be set up to send via Gmail in the “Sharing books by email” section of the preferences.
-
-Send email from: username@gmail.com
-Hostname: imap.gmail.com
-Port: 465
-Username: username@gmail.com
-Password: Your app password
-Encryption: SSL
-Send yourself a test email and hopefully it’ll arrive!
-
-

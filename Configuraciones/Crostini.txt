@@ -7,8 +7,7 @@ ln -sf /mnt/chromeos/MyFiles/GerardoHD/Imágenes/ ~/Imágenes
 ln -sf /mnt/chromeos/MyFiles/GerardoHD/Música/ ~/Música
 ln -sf /mnt/chromeos/MyFiles/GerardoHD/Vídeos/ ~/Vídeos
 
-Aplicar configuración de Git
-Aplicar configuración de GNOME
+Aplicar configuraciones comunes
 
-Añadir a marcadores la carpeta MyDrive
-Añadir a marcadores la carpeta GerardoHD
+Añadir a marcadores la carpeta /mnt/chromeos/GoogleDrive/MyDrive
+Añadir a marcadores la carpeta /mnt/chromeos/MyFiles/GerardoHD
