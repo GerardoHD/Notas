@@ -40,8 +40,11 @@ git config --global credential.helper store
 Token de Github: 
 
 En Extensiones de GNOME Shell activar:
+Adwaita Theme Switcher
 Applications Menu
 Blur my Shell
+Dock from Dash 
+Glasa
 Mpris Indicator Button
 Places Status Indicator
 Removable Drive Menu
