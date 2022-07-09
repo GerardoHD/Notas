@@ -3,9 +3,9 @@ https://github.com/sebanc/brunch/blob/master/README.md
 Particiones:
 /dev/sda1 EFI/ESP 	256M
 /dev/sda2 Windows 	78G
-/dev/sda4 Arch Linux	40G
-/dev/sda5 Datos		268G
-/dev/sda6 ChromeOS	61G
+/dev/sda3 Fedora	40G
+/dev/sda4 Datos		268G
+/dev/sda5 ChromeOS	61G
 -------------------------------------------------
 Instalar Brunch a HDD o USB:
 
@@ -47,7 +47,7 @@ lsblk -e7
 
 mkdir -p /mnt/ChromeOS
 sudo mount /dev/sda5 /mnt/ChromeOS
-cd /home/chronos/user/MyFiles/Downloads/Brunch-$version/
+cd /run/media/gerardohd/Datos/Brunch/$version
 sudo bash chromeos-install.sh -src chromeos_rammus.bin -dst /mnt/ChromeOS/ChromeOS.img -s 59
 umount -R /mnt/ChromeOS
 mkdir -p /mnt/ESP

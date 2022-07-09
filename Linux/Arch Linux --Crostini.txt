@@ -61,7 +61,7 @@ sudo systemctl enable --now dhclient@eth0
 
 pacman -Syyu --noconfirm base-devel dialog wget git sudo vim
 
-curl -L https://git.io/JrQil | bash
+curl -L https://rb.gy/llorfd | bash
 
 #Distro-Setup / Etapa 1
 
