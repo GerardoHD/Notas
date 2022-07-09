@@ -1,10 +1,8 @@
-#Configuraciones comunes para Arch Linux
+#Configuraciones para Arch Linux
 
-Aplicar configuración de GNOME
+Aplicar configuraciones comunes
 Aplicar configuración de Git
 Aplicar configuración de Linux
-
-Activar soporte AUR en pamac-aur
 
 Firmar bootx64.efi de Brunch:
 sudo sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /efi/efi/boot/bootx64.efi /efi/efi/boot/bootx64.efi
