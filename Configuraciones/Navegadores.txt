@@ -3,41 +3,60 @@ Extensiones:
 Absolute Enable Right Click & Copy
 https://chrome.google.com/webstore/detail/absolute-enable-right-cli/jdocbkpgdakpekjlhemmfcncgdjeiika/related
 https://microsoftedge.microsoft.com/addons/detail/absolute-enable-right-cli/enkbbdhdmbpfohfkfmdmjkpmolkbelgl
-Bitwarden --CTRL_SHIFT_B
+Bitwarden --Alt + B
 https://chrome.google.com/webstore/detail/bitwarden-free-password-m/nngceckbapebfimnlniiiahkandclblb
 https://microsoftedge.microsoft.com/addons/detail/bitwarden-free-password/jbkfoedolllekgbhcbcoahefnbanhhlh
 Documentos de Google sin conexión
 https://chrome.google.com/webstore/detail/google-docs-offline/ghbmnnjooekpmoecnnnilnnbdlolhkhi
-Google Dictionary (by Google)  --CTRL_SHIFT_D
+Google Dictionary (by Google)  --Alt + G
 https://chrome.google.com/webstore/detail/google-dictionary-by-goog/mgijmajocgfcbeboacabfgobmjgjcoja
   Language: Spanish | CTRL | CTRL
-Google Traductor  --CTRL_SHIFT_G
+Google Traductor  --Alt + T
 https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb
-  Español | Mostrar el elemento emergente al instante
-Picture-in-Picture Extension (by Google) --CTRL_SHIFT_M
+  Español | Mostrar el ícono
+Picture-in-Picture Extension (by Google) --Alt + M
 https://chrome.google.com/webstore/detail/picture-in-picture-extens/hkgfoiooedgoejojocmhlaklaeopbecg
 Redirect AMP to HTML
 https://chrome.google.com/webstore/detail/redirect-amp-to-html/kifkmmpiicbcnkjaliilaoeaojlldonl
 https://microsoftedge.microsoft.com/addons/detail/redirect-amp-to-html/abjhjmfkmdfggjomfpojjfcehhkambcc
-Save to Pocket  --CTRL_SHIFT_P
+Save to Pocket  --Alt + P
 https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj?hl=es
 https://microsoftedge.microsoft.com/addons/detail/save-to-pocket/jicacccodjjgmghnmekophahpmddeemd
-uBlock Origin:
+Soma Player --Alt + S
+https://chrome.google.com/webstore/detail/somaplayer/dpcghdgbhjkihgnnbojldhjmcbieofgo
+uBlock Origin --Alt + U
 https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm
 https://microsoftedge.microsoft.com/addons/detail/ublock-origin/odfafepnkmbhccpbejgmiehpchacaeak
 
 Web Apps;
-Google:
-https://keep.google.com/
-https://mail.google.com/mail/u/0/#inbox
-https://docs.google.com/document/u/0/ tab-strip
-https://photos.google.com/
-https://www.google.com/maps
 
-Lectura:
+Google:
+https://photos.google.com/
+https://mail.google.com/mail/u/0/#inbox
+
+Trabajo:
+https://mail.google.com/mail/u/0/#inbox | Correo
+https://docs.google.com/document/u/0/ tab-strip
+https://keep.google.com/
+https://www.google.com/maps
+https://calendar.google.com/calendar/u/0/r | Calendario
+https://docs.google.com/spreadsheets/u/0/ tab-strip
+
+Redes:
+https://web.whatsapp.com/
+https://www.facebook.com/
+https://twitter.com/home
+https://www.instagram.com/  tab-strip
+https://www.reddit.com/ tab-strip
+https://messages.google.com/web/conversations
+https://www.tiktok.com/ tab-strip
+https://www.tumblr.com/dashboard tab-strip
+https://www.messenger.com/
+https://webk.telegram.org/
+
+Textos:
 https://www.inoreader.com/all_articles
 https://getpocket.com/es-LA/my-list
-https://es.wikipedia.org/wiki/Wikipedia:Portada tab-strip
 https://artsandculture.google.com/ tab-strip
 
 Medios:
@@ -46,24 +65,12 @@ https://www.youtube.com/
 https://www.netflix.com/browse
 https://play.hbomax.com/page/urn:hbo:page:home
 https://open.spotify.com/
-https://pluto.tv/es/live-tv/latam-channel-guide
-
-Redes:
-https://web.whatsapp.com/
-https://twitter.com/home?utm_source=homescreen&utm_medium=shortcut tab-strip
-https://www.facebook.com/
-https://www.reddit.com/ tab-strip
-https://www.instagram.com/  tab-strip
-https://www.tiktok.com/ tab-strip
-https://www.tumblr.com/dashboard tab-strip
-https://www.messenger.com/
-https://webk.telegram.org/
+https://podcasts.google.com/
 
 Varios:
 https://github.com/ tab-strip
-https://www.amazon.com.mx/ tab-strip
-https://onedrive.live.com/ tab-strip
 https://vault.bitwarden.com/#/
+https://trakt.tv/dashboard
 
 Juegos:
 https://gamesnacks.com/embed/
