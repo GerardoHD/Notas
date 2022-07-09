@@ -109,3 +109,9 @@ Finally, force update your repository
 git push -f origin master
 
 PS: this will not keep your old commit history around
+
+
+Firmar imagenes GNOME OS:
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /tmp/GNOME/EFI/BOOT/BOOTX64.EFI	    /tmp/GNOME/EFI/BOOT/BOOTX64.EFI
+sbsign --key /etc/efi-keys/MOK.key     --cert /etc/efi-keys/MOK.crt 	--output /tmp/GNOME/EFI/systemd/systemd-bootx64.efi /tmp/GNOME/EFI/systemd/systemd-bootx64.efi
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /tmp/GNOME/boot/vmlinuz		    /tmp/GNOME/vmlinuz
