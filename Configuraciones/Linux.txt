@@ -22,15 +22,11 @@ git config --global color.ui true
 git config --global core.editor vim
 #
 git clone https://github.com/GerardoHD/Notas.git
-git clone https://github.com/GerardoHD/Linux.git
 git clone https://github.com/GerardoHD/Internet-TV.git
+git clone https://github.com/GerardoHD/Scripts.git
 git clone https://github.com/LaQuay/TDTChannels.git
 #
 #git clone https://github.com/iptv-org/iptv.git
-#git clone https://github.com/CleoMenezesJr/Custom-Adwaita-Folder-Icons.git
-#sudo mkdir -p /usr/share/icons/Custom-Adwaita-Folder-Icons
-#sudo rm /usr/share/icons/Custom-Adwaita-Folder-Icons/*.png
-#sudo cp Custom-Adwaita-Folder-Icons/Icons/*.png /usr/share/icons/Custom-Adwaita-Folder-Icons
 #
 cd ~
 #
@@ -40,28 +36,28 @@ git config --global credential.helper store
 Token de Github: 
 
 En Extensiones de GNOME Shell activar:
-Adwaita Theme Switcher
-Applications Menu
 Blur my Shell
-Dock from Dash 
+Desktop Clock
+Dock from Dash
 Glasa
+Light/Dark Theme Switcher
 Mpris Indicator Button
-Places Status Indicator
 Removable Drive Menu
-#User Themes
+-Rocketbar
+RunCat
+-Shell Configurator
+SomaFM Internet Radio
+-Sur Clock
+/
+Applications Menu
+Bubblemail
+Places Status Indicator
 
 Nautilus:
 Colocar carpetas antes que los archivos
 Permitir expandir las carpetas
 Descripciones de la vista de iconos: Mostrar modificado: fecha
 Columnas de la lista: Mostrar modificado: fecha
-#Configurar iconos de carpetas;
-#AUR = /usr/share/icons/Custom-Adwaita-Folder-Icons/Code.png
-#Git = /usr/share/icons/Custom-Adwaita-Folder-Icons/Git.png
-#Internet-TV = /usr/share/icons/Custom-Adwaita-Folder-Icons/Playlist.png
-#Linux = /usr/share/icons/Custom-Adwaita-Folder-Icons/Script.png
-#Notas = /usr/share/icons/Custom-Adwaita-Folder-Icons/Synchronizing.png
-#TDTChannels = /usr/share/icons/Custom-Adwaita-Folder-Icons/Multimedia.png
 
 Gedit:
 Mostrar números de línea
@@ -74,6 +70,18 @@ Git
 Multiedición
 Terminal empotrado
 
+LibreOffice:
+Gerardo Herrera Diaz GHD
+5 de Febrero 27, Lazaro Cardenas
+95226 Piedras Negras, Veracruz
+Mexico
+2851190807
+gerardoherreradiaz@gmail.com
+Recopilar datos de uso
+LibreOffice Writer;
+Regla vertical
+Guías al mover objetos
+
 Seleccionar carpetas de Disco Duro Externo y copiar a /run/media/gerardohd/Datos/
 
 Configurar Discos de GNOME para que monte la partición de Datos en /run/media/gerardohd/Datos/
@@ -84,4 +92,4 @@ ln -sf /run/media/gerardohd/Datos/GerardoHD/Documentos	/home/gerardohd/Documento
 ln -sf /run/media/gerardohd/Datos/GerardoHD/Imagenes 	/home/gerardohd/Imágenes/
 ln -sf /run/media/gerardohd/Datos/GerardoHD/Musica 	/home/gerardohd/Música/
 ln -sf /run/media/gerardohd/Datos/GerardoHD/Videos 	/home/gerardohd/Vídeos/
-	
+
