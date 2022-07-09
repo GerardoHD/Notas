@@ -74,8 +74,8 @@ Tumblr
 winget install 9NTDQP5CQG07
 Twitter
 winget install 9WZDNCRFJ140
-QuickLook
-winget install 9NV4BS3L1H4S
+-QuickLook
+-winget install 9NV4BS3L1H4S
 Where's My Water? 2
 ms-windows-store://pdp/?productid=9WZDNCRFJCV6
 Wikipedia
@@ -109,11 +109,13 @@ winget install Intel.IntelDriverAndSupportAssistant
 winget install JackieLiu.NotepadsApp
 -winget install Kingsoft.WPSOffice
 -winget install Lenovo.SystemUpdate
+-winget install Levitsky.FontBase
 -winget install Oracle.JavaRuntimeEnvironment
 -winget install Microsoft.Powertoys
 -winget install Mozilla.Firefox
-winget install Valve.Steam
+-winget install TheDocumentFoundation.LibreOffice
 -winget install Ubisoft.Connect
+winget install Valve.Steam
 -winget install Zoom.Zoom
 
 Desinstalar Apps del menú inicio
@@ -231,11 +233,13 @@ cscript ospp.vbs /inpkey:FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH
 cscript ospp.vbs /sethst:s8.uk.to
 cscript ospp.vbs /act
 cscript ospp.vbs /dstatus
-
+#
 Opciones de UI, Contraer el cuadro de búsqueda 
 Opciones de inicio, Mostrar nombres de marcas de presencia
 Opciones de notificación, Notificar con un sonido
 Predeterminar Carta como tamaño de papel
+Incrustar fuentes en el archivo
+Incrustar solo los caracteres usados
 Barra de herramienta de acceso rápido:
 Guardar
 Guardar como
