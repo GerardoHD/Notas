@@ -1,0 +1,47 @@
+lsblk
+cfdisk /dev/sda
+/dev/sda1 256M EFI System
+/dev/sda2 78G Microsoft basic data
+/dev/sda3 40G Linux root x86_64
+/dev/sda4 268G Microsoft basic data
+/dev/sda5 60,8G Linux root x86_64
+
+Al reiniciar en el configurador del sistema, cambiar el hostname
+
+Después de reiniciar en el sistema operativo ya configurado, ejecutar:
+curl -L https://rb.gy/llorfd | bash
+
+Cambiar preferencia de tema en gnome-terminal
+
+Ejecutar:
+Distro-Setup
+
+Reiniciar en el sistema actualizado
+
+Aplicar configuraciones comunes
+
+Desactivar fecha en barra superior, y activar mostrar segundos
+
+Investigar que hace este comando: timedatectl set-local-rtc 0
+
+Red Hat Bugzilla API:
+
+
+Limpiar cache abrt:
+sudo rm -rf /var/cache/abrt-di/*
+
+Limpiar cache debuginfod:
+rm -rf $HOME/.cache/debuginfod_client/*
+
+Encontrar archivos huerfanos:
+
+sudo find $DIR -exec rpm -q -f {} + | grep -ve "not owned"
+
+--------------------------------------
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+cp -rf /run/archiso/bootmnt/efi-keys /mnt/etc/
+
+#efibootmgr --create --disk /dev/sda --part 1 --label "Fedora" --loader "\efi\boot\grubx64.efi" --verbose
+
+sbsign --key /etc/efi-keys/db_arch.key --cert /etc/efi-keys/db_arch.pem --output /efi/efi/boot/shimx64.efi /efi/efi/boot/shimx64.efi
