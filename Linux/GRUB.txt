@@ -117,4 +117,3 @@ insmod normal
 normal
 
 https://askubuntu.com/questions/474672/how-do-i-remove-advanced-options-for-ubuntu-in-grub-menu
-
