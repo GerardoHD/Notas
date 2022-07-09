@@ -1,6 +1,9 @@
 #Configuraciones comunes para Crostini
 
-Enlazar carpetas con Crostini:
+Descargar Scripts:
+curl -L https://rb.gy/llorfd | bash
+
+Enlazar carpetas:
 ln -sf /mnt/chromeos/MyFiles/Downloads/ ~/Descargas
 ln -sf /mnt/chromeos/MyFiles/GerardoHD/Documentos/ ~/Documentos
 ln -sf /mnt/chromeos/MyFiles/GerardoHD/Imágenes/ ~/Imágenes
