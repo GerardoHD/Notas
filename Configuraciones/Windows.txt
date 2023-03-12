@@ -1,179 +1,100 @@
 Abrir Windows Update, activar obtener actualizaciones de otros productos de Microsoft y actualizar
 
-Cambiar formato regional a Español (España, internacional) 
+Instalar actualización opcional de Intel Corporation - Bluetooth  | INTEL driver SM Bus
 
-Activar programación de luz nocturna
+Desactivar copia de seguridad de carpetas de usuario en OneDrive
 
-Iniciar sesión en cuenta Google, crear accesos directos de Google Keep y fijarla a la barra de tareas
+Iniciar sesión en cuenta Google, fijar WhatsApp Web y Editor de Documentos, crear acceso directo de Google Keep
 
-Windows Terminal:
-Activar Mostrar acrílico en fila de pestañas, Modo de ancho de pestañas: Longitud del título
-Activar UTC en hora de Windows:
-reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
-Nexus Tools:
-iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/corbindavenport/nexus-tools/master/install.ps1'))
+Configuración:
+_Sistema > Pantalla | Activar programación de luz nocturna
+Sistema > Notificaciones | Desactivar Mostrar aplicaciones en la pantalla de bloqueo | Activar Notificación de aplicación de inicio
+Sistema > Almacenamiento | Activar Sensor de Almacenamiento
+Sistema > Uso compartido en proximidad | Cualquier persona que esté cerca
+Sistema > Multitareas | Alt+Tab, mostrar ventanas y 3 pestañas de Edge, agitar barra de título de ventana
+Sistema > Portapapeles | Activar todo
+Personalización > Pantalla de bloqueo | Estado de la pantalla de bloqueo: Weather
+Personalización > Inicio | Mostrar las aplicaciones más usadas, mostrar elementos abiertos recientemente > Carpetas | Configuración, Carpeta personal > Barra de tareas | Desactivar Buscar | Desactivar Chat
+Aplicaciones > Aplicaciones y características > Microsoft Teams > Desactivar ejecución en el inicio de sesión.
+Cuentas >  Opciones de inicio de sesión | Guardar automaticamente, Mostrar detalles de la cuenta
+Hora e idioma > Región e idioma | Formato regional a Español (España, internacional) 
+Accesibilidad > Teclado | Teclas de alternancia
 
-Instalar actualizaciones desde Microsoft Store
+Panel de configuración de gráficos HD Intel:
+3D:
+Activar configuración rendimiento
+Mejorar configuración de la aplicación
+Energía:
+Rendimiento máximo
 
-Cambiar ubicación de guardado de carpetas de usuario en Windows Explorer y configurarlo
+Windows Terminal > Apariencia | Modo de ancho de pestañas: Longitud del título
+
+Explorador de archivos
 General:
 Abrir explorador de archivos para: Este equipo
 Ver:
 Usar las casillas para seleccionar elementos
+Desactivar: Ocultar las extensiones de archivo
+Mostrar siempre el estado de disponibilidad
 
-Usando administración de discos, asignar U: HUB USB, y asignar I: DVD RW
+En administración de discos, asignar; H: GHD-931, L: DVD RW, U: HUB USB
 
 Quitar aplicaciones "sugeridas"
+Adobe Express
 Clipchamp
 Disney+
+ESPN
+Microsoft Noticias
+Microsoft Teams
+Microsoft To Do
+Notas rápidas
+Office
 Prime Video
+Solitaire Collection
 Spotify
+To Do
+
+Instalar actualizaciones desde Microsoft Store y reiniciar
+
+Software y Nexus Tools:
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://bit.ly/ghdwinsw'))
 
 Instalar Apps:
-ACG Player
-winget install 9NBLGGH698C7
-AV1 Video Extension
-winget install 9MVZQVXJBQ9V
-DevToys
-winget install 9PGCV4V3BK4W
-Extensión de imagen RAW
-winget install 9NCTDW2W1BH8
 Extensiones de video HEVC
-winget install 9NMZLZ57R3T7
-Extensiones de video HEVC del fabricante del fabricante del dispositivo
-ms-windows-store://pdp/?productid=9N4WGH0Z6VHQ
-Extensión de vídeo MPEG-2
-winget install 9N95Q1ZZPMH4
-Facebook
-winget install 9WZDNCRFJ2WL
-Instagram
-winget install 9NBLGGH5L9XT
-Messenger
-winget install 9WZDNCRF0083
-MusicBee
-winget install 9P4CLT2RJ1RS
-MyIPTV Player
-winget install 9PJJ2NMBF0TR
-myTube!
-winget install 9WZDNCRCWF3L
-Ouga - Tumblr App
-winget install 9NBLGGH6GVHJ
-Reddit
-winget install 9NS3RBQ5HV5F
-Ridiculous Marathon
-ms-windows-store://pdp/?productid=9NBLGGH626FL
-Rufus:
-winget install 9PC3H3V7Q9CH
+start ms-windows-store://pdp/?productid=9NMZLZ57R3T7
+Extensiones de video HEVC del fabricante del del dispositivo
+start ms-windows-store://pdp/?productid=9N4WGH0Z6VHQ
+-Ridiculous Marathon
+-start ms-windows-store://pdp/?productid=9NBLGGH626FL
 Tentacles: Enter the mind
-ms-windows-store://pdp/?productid=9WZDNCRFJB4N
-TikTok
-winget install 9NH2GPH4JZS4
+start ms-windows-store://pdp/?productid=9WZDNCRFJB4N
 Torrex Pro
-ms-windows-store://pdp/?productid=9WZDNCRDSGKG
-Tumblr
-winget install 9NTDQP5CQG07
-Twitter
-winget install 9WZDNCRFJ140
--QuickLook
--winget install 9NV4BS3L1H4S
+start ms-windows-store://pdp/?productid=9WZDNCRDSGKG
 Where's My Water? 2
-ms-windows-store://pdp/?productid=9WZDNCRFJCV6
-Wikipedia
-winget install 9MWVHFBTQ9ZQ
-
-winget install Microsoft.VC++2005Redist-x86
-winget install Microsoft.VC++2005Redist-x64
-winget install Microsoft.VC++2008Redist-x86
-winget install Microsoft.VC++2008Redist-x64
-winget install Microsoft.VC++2010Redist-x86
-winget install Microsoft.VC++2010Redist-x64
-winget install Microsoft.VC++2012Redist-x86
-winget install Microsoft.VC++2012Redist-x64
-winget install Microsoft.VC++2013Redist-x86
-winget install Microsoft.VC++2013Redist-x64
-winget install Microsoft.VC++2015-2019Redist-x86
-winget install Microsoft.VC++2015-2019Redist-x64
-
-winget install 7zip.7zip | Activar predefinidos
--winget install AdrianAllard.FileConverter
--winget install Amazon.Kindle
-winget install Armin2208.WindowsAutoNightMode
--winget install Bitwarden.Bitwarden
-winget install calibre.calibre
-winget install clsid2.mpc-hc
--winget install ElectronicArts.EADesktop
--winget install EpicGames.EpicGamesLauncher
-winget install Google.Chrome
-winget install Google.Drive | Configurar letra E: para Google Drive
-winget install Intel.IntelDriverAndSupportAssistant
-winget install JackieLiu.NotepadsApp
--winget install Kingsoft.WPSOffice
--winget install Lenovo.SystemUpdate
--winget install Levitsky.FontBase
--winget install Oracle.JavaRuntimeEnvironment
--winget install Microsoft.Powertoys
--winget install Mozilla.Firefox
--winget install TheDocumentFoundation.LibreOffice
--winget install Ubisoft.Connect
-winget install Valve.Steam
--winget install Zoom.Zoom
-
-Desinstalar Apps del menú inicio
-Cortana: 
-Get-AppxPackage -allusers Microsoft.549981C3F5F10 | Remove-AppxPackage
-Microsoft Solitaire Collection:
-Get-AppxPackage *solitairecollection* | Remove-AppxPackage
--OneNote: 
-Get-AppxPackage *onenote* | Remove-AppxPackage
-Office: 
-Get-AppxPackage *officehub* | Remove-AppxPackage
--Portal de realidad mixta:
-Get-AppxPackage *Microsoft.MixedReality.Portal* | Remove-AppxPackage
--Skype: 
-Get-AppxPackage *skypeapp* | Remove-AppxPackage
-Tu Telefono: 
-Get-AppxPackage *Microsoft.YourPhone* | Remove-AppxPackage
-Xbox Console Companion: 
-Get-AppxPackage *Microsoft.XboxApp* | Remove-AppxPackage
--Visor 3D:
-Get-AppxPackage *Microsoft.Microsoft3DViewer* | Remove-AppxPackage
-
-Instalar programas de \Windows\Programas\
--Desactivar protección en tiempo real de Seguridad de Windows
--  Instalar KMSpico
--  Agregar exclusiones:
--  C:\Windows\SECOH-QAD.dll
--  C:\Windows\SECOH-QAD.exe
--  C:Program Files\KMSpico\AutoPico
--  C:Program Files\KMSpico\KMSELDI.exe
--  C:Program Files\KMSpico\Service_KMS.exe
--  C:Program Files\KMSpico
-
-Serial Allavsoft:
-1EFD-4727-7CE3-C67C-DEC4-B3E8-7B22-82A5
-Serial UltraISO:
-3683-C3CB-56C8-7DF4
-
-Descomprimir e instalar Office 2021
-
-Reactivar protección en tiempo real de Seguridad de Windows
+start ms-windows-store://pdp/?productid=9WZDNCRFJCV6
 
 Instalar actualizaciones de Intel Support & Driver Assistant
 
+Instalar \Windows\Juegos\ y \Windows\Programas\ 
+
+Serial Allavsoft:
+1EFD-4727-7CE3-C67C-DEC4-B3E8-7B22-82A5
+
+En Drivers Epson L4150.iso: ejecutar EPWizard.exe | Solo instalar Drivers y utilidades EPSON, y enlace al manual de usuario EPSON. Repetir para configurar la impresora inalámbricamente.
+
 Copiar carpeta de accesos directos
 
--Configurar Ultimate Windows Tweaker:
+Configurar Ultimate Windows Tweaker:
+En protección del sistema, poner al 2%
   Customization
   -
   File explorer:
   Make taskbar button switch to last active window
   Check by default "Do this for all current items"
   Tweak drive letters: Before label
-  -
+   -
   This PC:
-  Activar Recycle Bin
-  Customize inbuilt folders:
-  Activar todas excepto objetos 3D
+  Activar todas las carpetas integradas y Recycle Bin 
   --
   User Accounts:
   Enable verbose logon messages
@@ -189,41 +110,12 @@ Copiar carpeta de accesos directos
   Model: C20-00
   Support URL: https://pcsupport.lenovo.com/mx/es/products/desktops-and-all-in-ones/lenovo-c-series-all-in-ones/c20-00/f0bb/f0bb00ggld/mp13u8sn
   
-Montar D:\ISO\Controladores\Driver Epson L4150.iso y ejecutar EPWizard.exe | repetir para configurar la impresora inalámbricamente
-Montar D:\ISO\Windows-Juegos\Papers Please 1.2.72.iso y ejecutar setup.exe
-Montar D:\ISO\Windows-Juegos\Untitled Goose Game.iso y ejecutar setup.exe
-Montar D:\ISO\Windows-Juegos\Microsoft Office Professional Plus 2019 Retail.iso y ejecutar setup.exe
-
 Tras reiniciar el sistema, volver a ejecutar Windows Update, y poner a Word a actualizarse
 
 Ejecutar EPSON Software Updater e instalar EPSON ScanSmart
 
-Ir a: C:\ProgramData\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas
-Eliminar accesos directos de Outlook y Skype Empresarial
-Ir a: C:\Users\Gerar\AppData\Roaming\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas
-
-MusicBee:
-<Artista del Álbum>\<Álbum [Año]>\<Disco-Tema> <Título>
-Configurar Monoaural como tema
-En la vista de pistas, activar Caratula mediana
-En el reproductor inferior activar el botón favorito de Last.fm
-
-Panel de configuración de gráficos HD Intel:
-3D:
-Activar configuración rendimiento
-Mejorar configuración de la aplicación
-Energía:
-Rendimiento máximo
-Opciones y asistencia:
-Desactivar icono en bandeja
-
-Aplicar configuración de Calibre
-
-Copiar D:\Respaldos\Windows\PapersPlease C:\Users\Gerar\AppData\Roaming\3909
-Copiar D:\Windows\Varios\toolbar.png C:\ProgramFiles\MPC-HC\
-
-Office;
-Activar:
+Activar Office:
+Office 2021
 Abrir cmd como administrador:
 cd /d %ProgramFiles%\Microsoft Office\Office16
 for /f %x in ('dir /b ..\root\Licenses16\ProPlus2021VL_KMS*.xrm-ms') do cscript ospp.vbs /inslic:"..\root\Licenses16\%x"
@@ -234,12 +126,13 @@ cscript ospp.vbs /sethst:s8.uk.to
 cscript ospp.vbs /act
 cscript ospp.vbs /dstatus
 #
-Opciones de UI, Contraer el cuadro de búsqueda 
-Opciones de inicio, Mostrar nombres de marcas de presencia
-Opciones de notificación, Notificar con un sonido
-Predeterminar Carta como tamaño de papel
-Incrustar fuentes en el archivo
+Office:
+Opciones de UI > Contraer el cuadro de búsqueda, Mostrar nombres de marcas de presencia. No cambiar nunca el color de la página 
+Presentación > Tabulaciones, espacios 
+Guardar > Incrustar fuentes en el archivo e Incrustar solo los caracteres usados en el documento
 Incrustar solo los caracteres usados
+Accesibilidad > Opciones de notificación, Notificar con un sonido
+Predeterminar Carta como tamaño de papel
 Barra de herramienta de acceso rápido:
 Guardar
 Guardar como
@@ -247,16 +140,82 @@ Vista previa de impresión e imprimir
 Abrir
 Nuevo archivo
 
-Configuración:
-Sistema > Multitareas | Alt+Tab, mostrar ventanas y 3 pestañas de Edge
-Sistema > Portapapeles | Activar Portapapeles
-Personalización > Inicio | Mostrar elementos abiertos recientemente > Carpetas | Configuración, Descargas, Documentos > Barra de tareas | Desactivar Widgets, Chat
---------------------------------------------------------------
+MusicBee:
+Configurar Monoaural como tema
+En la vista de pistas, activar Caratula mediana
+En el reproductor inferior activar el botón favorito de Last.fm
+Biblioteca > Auto-organizar: <Artista del Álbum>\<Álbum [Año]>\<Disco-Tema> <Título>
+Añadir dispostivo virtual All Stars:
+Musica > Sincronizar Lista All Stars
+Configuraciones > Convertir a MP3 HQ | Convertir solo los que tengan un formato sin pérdidas
+lyrics storage | always copy to .lrc file
+Ordenar paneles > Barra de menú | Mostrar en la barra de título
+Ordenar paneles > Controles del reproductor | Mostrar en el panel superior 
+
+Aplicar configuración de Programas Multiplataforma
+
+Aplicar configuración de Navegadores
+
+7Zip | Abrir como administrador, Activar predefinidos. Cambiar idioma a español
+#
+Advanced Renamer | Activar mostrar en menú contextual 
+#
+Allavsoft | Download FLAC music with cover art
+#
+Auto Dark Mode |  Horario: Del anochecer al amanecer | Aplicaciones: Ajustar al tema en todas | Personalization: Theme
+#
+Correo | Activar Bandeja vinculada > Usar color de enfasis de Windows, Fondo predeterminado > Contenido externo: Descargar automaticamente > Notificaciones: Activado, desactivadas las otras 3 opciones
+#
+DiRT3 | Resolución a 1152*864
+#
+FontBase | Activar todas las opciones en App Behavior
+Instalar IBM Plex: Mono, Sans, Cond, Serif | Fira: Code, Mono, Sans, Sans Condensed, Sans Extra Condensed | Jost |
+#
+Google Drive  | Asignar  G:\ para Google Drive | Carpeta local: C:\Users\Gerar\Google Drive | Hacer que las carpetas Entrada y Personas estén disponible sin conexión. CORE-ID
+#
+MEGAsync | Sincronizar:  C:/Users/Gerar/MEGA | Descargas: C:/Users/Gerar/Downloads/MEGAsync Downloads
+#
+Microsoft Edge | Diseño de página inicial: Personalizado, solo activar: Mostrar saludo 
+#
+Seguridad de Windows | Exclusiones: C:\Users\Gerar\Google Drive | C:\Users\Gerar\Datos\Windows | C:\Users\Gerar\OneDrive | C:\Users\Gerar\Box | C:\Users\Gerar\MEGA
+#
+Steam | Parametros > Interfaz por defecto: Biblioteca. Desactivar iniciar Steam con el equipo | Desactivar inicio de sesión automático en amigos | Modo Big Picture a 1900*600
+Instalar: Among Ripples. Bejeweled 3. Chicken Invaders 5. DIRT3. Horizon Chase turbo. Kao the Kangaroo. Papers, Please. The Plan. Progresbarr95. Superflight. Zenge. Zuma Revenge
+#
+Superflight I Resolution 1152*864
+#
+ZENGE | Resolution 1600*900
+#
+Torrex | Configurar C:\Users\Gerar\Downloads\Torrents como carpeta de Descargas | Añadir torrent automáticamente |  Fondos transparentes | Sin fondo
+#
+
+Copiar C:\Users\Gerar\Datos\Windows\Varios\toolbar.png C:\Program Files\MPC-HC\
+
+Realizar la traducción de Plants VS Zombies usando los archivos de C:\Users\Gerar\Datos\Windows\Varios\
+
+Ir a: C:\ProgramData\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas, y quitar accesos directos de OneNote y Outlook
+Ir a: C:\Users\Gerar\AppData\Roaming\Microsoft\Windows\Start Menu\Programs y extraer de las carpetas los accesos directos de programas
+#Borrar carpetas innecesarias
+
+Temas: 
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/GerardoHD/Scripts/main/Windows/Themes.ps1'))
+
+Administrador de tareas: 
+Procesos: Nombre | Tipo | CPU | Memoria | Disco | Red | GPU | Editor
+Historial de aplicaciones: Nombre | Tempo de CPU | Red | Descargas | Cargas
+Aplicaciones de arranque: Nombre | Editor | Estado | Impacto de inicio | Tipo de inicio | E/S de inicio | CPU al inicio | Actualmente en ejecución 
+Usuarios: Usuario | Id. | CPU | Memoria | Disco | Red | GPU | Sesión | Estado 
+Detalles: Nombre | PID | Estado | Nombre de Usuario | CPU | Arquitectura | Descripción
+Servicios: Nombre | PID | Descripción | Estado | Grupo 
+
+-------------------------------------------------------------
 Seriales:
 Halo CE: G9QK2-22KV6-TFXCR-V3Y9M-2CCBJ
 UltraISO: 3683-C3CB-56C8-7DF4
 AOMEI Partition Assistant: AOPR-9F9F9-D7R09-F98F9
 Doom 3: Q7G4-ALZ9-N5NV-Z98S-C4
+Serial UltraISO:
+3683-C3CB-56C8-7DF4
 
 Filebot:
 Peliculas: 
@@ -265,4 +224,3 @@ Episodios:
 E:/Filebot/TV/{ny}/{'Season '+s}/{n} - {s00e00} - {t}
 Musica: 
 E:/Filebot/Music/{n}/{album} {[y]}/{pi.pad(2)+' - '} {t}
-
